@@ -7,6 +7,12 @@
 * [ Installing necessey applications ](#installing-necessey-applications)
 *[Using dotfiles](using-dotfiles)
 
+## Arch install summery
+  - Disk partition - ext4 with encryption
+  - kernel - LTS kernel
+  - Desktop - i3-gaps
+  - Sound - pulseaudio
+
 ## First installs
 
 1. Install firefox and kitty terminal
@@ -247,6 +253,13 @@ sudo pacman -S kvantum
   ```
   systemctl mask systemd-rfkill.service systemd-rfkill.socket
   ```
+  
+- ntfs-3g - ntfs partition support for arch
+    
+   Install ntfs-3g 
+    ```
+    sudo pacman -S ntfs-3g
+    ```
   
 - i3lock - Lock screen for i3wm
   
