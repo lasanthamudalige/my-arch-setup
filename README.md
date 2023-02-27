@@ -127,13 +127,68 @@ exec always nitrogen --restore
 
 ## Add blur, transparency and visual effects using picom
 
-#### Install picom
+### Install picom
 ```
 sudo pacman -S picom
 ```
 
-#### Add auto exection to i3 config file
+### Add auto exection to i3 config file
 ```
 exec picom
+```
+
+## Change gtk and qt5 themes
+
+### Install lxappearance to manage gtk themes
+```
+sudo pacman -S install lxappearance
+```
+
+### Install qt5ct to manage qt themes
+```
+sudo pacman -S qt5t
+```
+- If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"
+  - create a .profile in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct"
+
+### Install themes to change everything to a dark background
+
+#### Install Adwaita and Adwaita-dark themes for gtk applications
+```
+sudo pacman -S gnome-themes-extra
+```
+
+#### Install kvantum theme for qt applications
+```
+sudo pacman -S kvantum
+```
+
+## Installing applications 
+
+### Installing necessey applications
+
+#### Brightnessctl
+This is a program to adjust brightness in my laptop(Thinkpad t480s) using hot keys
+
+##### Installing Brightnesstcl
+```
+sudo pacman -S brightnesstcl
+```
+
+##### Add these commands to i3 config to use Brightnesstcl
+```
+# Brightness up
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+# Brightness down
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+
+```
+
+#### Dolphin file manager
+This is file manager in kde to hande files in a GUI
+
+##### Installing dolphin file manager
+```
+sudo pacman dolphin dolphin-plugins # extra plugins to use in the file manager
 ```
 
