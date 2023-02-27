@@ -5,6 +5,7 @@
 * [Essential things to do after installing arch linux](#essential-things-to-do-after-installing-arch-linux)
 * [Customizing i3 setup](#customizing-i3-setup)
 * [ Installing necessey applications ](#installing-necessey-applications)
+*[Using dotfiles](using-dotfiles)
 
 ## First installs
 
@@ -329,3 +330,5 @@ sudo pacman -S kvantum
   ```
   sudo pacman -S kate
   ```
+  
+  ## Using dotfiles
