@@ -37,12 +37,12 @@ bindsym $mod+q kill
 sudo vim /etc/pacman.conf
 ```
 
-- ***Uncomment "#Color" to change black and white.***
+- ***Uncomment "#Color" to change the black and white terminal to a colorsful one.***
 - ***Add "ILoveCandy" below it to change default install progress bar.*** 
 
 2. ***Save the file.***
 
-##### Automatic cleaning the package cache
+### Automatic cleaning the package cache
 
 1. Install paccache package
 ```
@@ -55,7 +55,7 @@ sudo systemctl enable paccache.timer
 ```
   - ***This will clean package cache every week.***
   
-##### Install Aur helper (yay)
+### Install Aur helper (yay)
  ```
 sudo pacman -S --needed base-devel git
 mkdir Programs
@@ -116,14 +116,14 @@ sudo systemctl enable ufw.service
 sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 ```
 
-### Set wallpaper woth nitrogen
+### Set wallpaper with nitrogen
 
 1. Install nitrogen:
 ```
 sudo pacman -S nitrogen
 ```
 
-2. Add auto execute to i3 config file
+2. Add this command to i3 config file to restore the wallpaper on the screen after reboot
 ```
 exec always nitrogen --restore
 ```
