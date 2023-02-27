@@ -331,4 +331,7 @@ sudo pacman -S kvantum
   sudo pacman -S kate
   ```
   
+  ***More apps to install***
+  ![AzmCYZ3](https://user-images.githubusercontent.com/91461938/221640326-aed2b07f-d110-487c-a549-9b13ddda80ed.jpg)
+  
   ## Using dotfiles
