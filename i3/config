@@ -59,7 +59,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+#bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -197,22 +197,66 @@ bar {
 # Custom configuration #
 ########################
 
-# Disable window titlebars entirely
+# disable window titlebars entirely
 for_window [class="^.*"] border pixel 2
 
-# Set inner/outer gaps
+# set inner/outer gaps
 gaps inner 7
 gaps outer 2
 
-# Laptop brigthness adjustment using brightnessctl
+# this will capture the screen and save it to the lock screen using a custom script
+# assign lock.sh to $i3lockwall 
+set $i3lockwall sh ~/.config/i3/scripts/lock.sh
+
+# key binds to lock the screen
+bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
+
+# shutdown / restart / suspend menu using dmenu
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
+
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $i3lockwall, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $i3lockwall && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $i3lockwall && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Ctrl+s exec --no-startup-id systemctl poweroff -i, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# key combination to launch above menu
+bindsym $mod+BackSpace mode "$mode_system"
+
+
+# laptop brigthness adjustment using brightnessctl
+# brightness up
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+# brightness down
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
-# Restore wallpaper using nitrogen 
-exec always nitrogen --restore
+# add wallpaper using nitrogen
+# restore wallpaper on restart
+ exec --no-startup-id nitrogen --restore
 
-# Screenshots using flameshot
-# Start program at the start
+# start picom on boot
+exec --no-startup-id  picom
+
+# start clipq on boot
+exec --no-startup-id clipq
+
+# Start redshift with custom location
+#exec --no-startup-id redshift -l 7.237472:80.282722
+
+exec --no-startup-id redshift
+
+# execute rofi application menu
+bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
+
+# screenshots using flameshot
+# start program at the start
 #exec --no-startup-id flameshot
-# Execute flameshot when prinscreen key pressed
+# execute flameshot when prinscreen key pressed
 bindsym Print exec "flameshot gui"
