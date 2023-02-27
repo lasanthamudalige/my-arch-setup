@@ -4,6 +4,7 @@
 * [First installs](#first-installs)
 * [Essential things to do after installing arch linux](#essential-things-to-do-after-installing-arch-linux)
 * [Customizing i3 setup](#customizing-i3-setup)
+* [ Installing necessey applications ](#installing-necessey-applications)
 
 ## First installs
 
@@ -163,19 +164,16 @@ sudo pacman -S gnome-themes-extra
 sudo pacman -S kvantum
 ```
 
-## Installing applications 
+## Installing necessey applications
 
-### Installing necessey applications
+#### Brightnesstcl - brightess adjustment program to adjust brightss in laptops using hot keys
 
-#### Brightnessctl
-This is a program to adjust brightness in my laptop(Thinkpad t480s) using hot keys
-
-##### Install Brightnesstcl
+Install brightnesstcl
 ```
-sudo pacman -S brightnesstcl
+sudo pacman -S brightnesstcl # Run this to install
 ```
 
-##### Add these commands to i3 config to use Brightnesstcl
+- Add these commands to i3 config to use Brightnesstcl
 ```
 # Brightness up
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
@@ -183,20 +181,19 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 ```
 
-#### Rofi application launcher
-Modern application launcher to replace demenu
+#### Rofi application launcher - modern application launcher to replace demenu
 
-##### Install Rofi
+Install Rofi
 ```
 sudo pacman -S rofi
 ```
 
-##### comment out this demenu command
+- comment out this demenu command in i3 config file
 ```
 bindsym $mod+d exec --no-startup-id dmenu_run
 ```
 
-##### Add this command i3 config file to launch rofi for $mode+d key 
+- Add this command to i3 config file to launch rofi on $mode+d  
 ```
 bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
 ```
