@@ -132,7 +132,7 @@ sudo pacman -S nitrogen
 
 2. Add this command to i3 config file to restore the wallpaper on the screen after reboot
 ```
-exec always nitrogen --restore
+exec --no-startup-id nitrogen --restore
 ```
 
 ## Add blur, transparency and visual effects using picom
@@ -144,7 +144,7 @@ sudo pacman -S picom
 
 2. Add auto exection to i3 config file:
 ```
-exec picom
+exec --no-startup-id picom
 ```
 
 ## Change gtk and qt5 themes
@@ -348,3 +348,55 @@ sudo pacman -S kvantum
   ![AzmCYZ3](https://user-images.githubusercontent.com/91461938/221640326-aed2b07f-d110-487c-a549-9b13ddda80ed.jpg)
   
   ## Using dotfiles
+  
+  1. Clone the repo
+    ```
+    https://github.com/lasanthamudalige/my-arch-setup.git
+    ```
+  2. Move config files
+
+      - Move i3 folder to "~/.config" folder
+        ```
+        sudo mv i3/ .config/
+        ```
+      
+      - Move i3status.conf to "/etc" folder
+        ```
+        sudo mv i3status.conf /etc/
+        ```
+        
+       - Move kitty.conf to "~/.config/kitty" folder
+         ```
+         sudo mv kitty.conf .config/kitty/
+         ```
+        
+          ***If there is no kitty folder make one inside ".config" folder***
+        
+            - cd into ".config" folder
+              ```
+              cd .config/
+              ```
+              
+            - Make a kitty folder
+              ```
+              mkdir kitty 
+              ```
+        
+       - Move picom.conf to "~/.config/picom" folder
+         ```
+         sudo mv picom.conf .config/picom/
+         ```
+        
+          ***If there is no picom folder make one inside ".config" folder***
+          
+            - cd into .config folder
+              ```
+              cd .config/
+              ```
+              
+            - Make picom folder
+              ```
+              mkdir picom
+              ```
+        
+  3. [Do essential things](#essential-things-to-do-after-installing-arch-linux)
