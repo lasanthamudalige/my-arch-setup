@@ -1,6 +1,7 @@
 # How i configured my first arch i3 setup
 
 ## Table of contents
+* [Arch install summery](arch-install-summery)
 * [First installs](#first-installs)
 * [Essential things to do after installing arch linux](#essential-things-to-do-after-installing-arch-linux)
 * [Customizing i3 setup](#customizing-i3-setup)
