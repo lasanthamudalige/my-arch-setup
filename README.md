@@ -152,7 +152,9 @@ sudo pacman -S install lxappearance
 sudo pacman -S qt5ct
 ```
 - ***If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"***
-  - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct"
+  - create a ".profile" file in home directory
+  - Add "export QT_QPA_PLATFORMTHEME="qt5ct"
+  - ***Save it***
 
 ### Install themes to change everything to a dark background
 
@@ -246,8 +248,18 @@ sudo pacman -S kvantum
   ```
   
 - i3lock - Lock screen for i3wm
+  
+  1. Install i3lock
+  ```
+  sudo pacman -S i3lock
+  ```
 
 - Redshift - Adjust screen color temperature accodring to the time
+
+  1. Install redshift
+  ```
+  sudo pacman -S redshift
+  ```
 
 - Flameshot - Screenshot tool
 
