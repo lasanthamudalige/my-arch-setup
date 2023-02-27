@@ -52,7 +52,7 @@ sudo systemctl enable paccache.timer
 ```
   - This will clean package cache every week
   
- ### Install Aur helper (yay)
+### Install Aur helper (yay)
  ```
 sudo pacman -S --needed base-devel git
 mkdir Programs
@@ -146,10 +146,10 @@ sudo pacman -S install lxappearance
 
 ### Install qt5ct to manage qt themes
 ```
-sudo pacman -S qt5t
+sudo pacman -S qt5ct
 ```
 - If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"
-  - create a .profile in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct"
+  - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct"
 
 ### Install themes to change everything to a dark background
 
@@ -170,7 +170,7 @@ sudo pacman -S kvantum
 #### Brightnessctl
 This is a program to adjust brightness in my laptop(Thinkpad t480s) using hot keys
 
-##### Installing Brightnesstcl
+##### Install Brightnesstcl
 ```
 sudo pacman -S brightnesstcl
 ```
@@ -181,13 +181,30 @@ sudo pacman -S brightnesstcl
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 # Brightness down
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+```
 
+#### Rofi application launcher
+Modern application launcher to replace demenu
+
+##### Install Rofi
+```
+sudo pacman -S rofi
+```
+
+##### comment out this demenu command
+```
+bindsym $mod+d exec --no-startup-id dmenu_run
+```
+
+##### Add this command i3 config file to launch rofi for $mode+d key 
+```
+bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
 ```
 
 #### Dolphin file manager
 This is file manager in kde to hande files in a GUI
 
-##### Installing dolphin file manager
+##### Install dolphin file manager
 ```
 sudo pacman dolphin dolphin-plugins # extra plugins to use in the file manager
 ```
