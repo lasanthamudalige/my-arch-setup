@@ -256,9 +256,14 @@ sudo pacman -S kvantum
 
 - Redshift - Adjust screen color temperature accodring to the time
 
-  1. Install redshift
+  1. Install redshift and geoclue2 to find location
   ```
-  sudo pacman -S redshift
+  sudo pacman -S redshift geoclue2
+  ```
+  
+  2. Add redshift to i3 config file to run on boot
+  ```
+  exec --no-startup-id redshift
   ```
 
 - Flameshot - Screenshot tool
