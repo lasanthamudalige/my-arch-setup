@@ -348,56 +348,68 @@ sudo pacman -S kvantum
   ***More apps to install***
   ![AzmCYZ3](https://user-images.githubusercontent.com/91461938/221640326-aed2b07f-d110-487c-a549-9b13ddda80ed.jpg)
   
-  ## Using dotfiles
+## Using dotfiles
   
-  1. Clone the repo
-    ```
-    https://github.com/lasanthamudalige/my-arch-setup.git
-    ```
-  2. Move config files
+1. Clone the repo
+  ```
+  https://github.com/lasanthamudalige/my-arch-setup.git
+  ```
+2. Move config files
 
-      - Move i3 folder to "~/.config" folder
-        ```
-        sudo mv i3/ .config/
-        ```
+    - Move i3 folder to "~/.config" folder
+      ```
+      sudo mv i3/ .config/
+      ```
       
-      - Move i3status.conf to "/etc" folder
-        ```
-        sudo mv i3status.conf /etc/
-        ```
+    - Move i3status.conf to "/etc" folder
+      ```
+      sudo mv i3status.conf /etc/
+      ```
         
-       - Move kitty.conf to "~/.config/kitty" folder
-         ```
-         sudo mv kitty.conf .config/kitty/
-         ```
+     - Move kitty.conf to "~/.config/kitty" folder
+       ```
+       sudo mv kitty.conf .config/kitty/
+       ```
         
-          ***If there is no kitty folder make one inside ".config" folder***
+       ***If there is no kitty folder make one inside ".config" folder***
         
-            - cd into ".config" folder
-              ```
-              cd .config/
-              ```
+          - cd into ".config" folder
+            ```
+            cd .config/
+            ```
               
-            - Make a kitty folder
-              ```
-              mkdir kitty 
-              ```
+          - Make a kitty folder
+            ```
+            mkdir kitty 
+            ```
         
-       - Move picom.conf to "~/.config/picom" folder
-         ```
-         sudo mv picom.conf .config/picom/
-         ```
+     - Move picom.conf to "~/.config/picom" folder
+       ```
+       sudo mv picom.conf .config/picom/
+       ```
         
-          ***If there is no picom folder make one inside ".config" folder***
+       ***If there is no picom folder make one inside ".config" folder***
           
-            - cd into .config folder
-              ```
-              cd .config/
-              ```
+          - cd into .config folder
+            ```
+            cd .config/
+            ```
               
-            - Make picom folder
-              ```
-              mkdir picom
-              ```
+          - Make picom folder
+            ```
+            mkdir picom
+            ```
         
-  3. [Do essential things](#essential-things-to-do-after-installing-arch-linux)
+3. [Do essential things](#essential-things-to-do-after-installing-arch-linux)
+  
+4. Install necessary applications 
+     
+   - For Laptops
+     ```
+     sudo pacman -S
+     ```
+     
+   - For Desktops
+     ```
+     sudo pacman -S
+     ```
