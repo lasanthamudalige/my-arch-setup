@@ -91,7 +91,7 @@ sudo pacman -S intel-ucode # for Intel processors
 sudo pacman -S ufw
 ```
 
-#### TO enable UFW
+#### To enable UFW
 ```
 sudo ufw enable
 ```
@@ -108,7 +108,7 @@ sudo systemctl enable ufw.service
 
 ## Customizing i3 setup
 
-### Install jetbrains-mono fonts
+### Install jetbrains-mono fonts to use in terminal and visual studio code terminal
 ```
 sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 ```
@@ -123,5 +123,17 @@ sudo pacman -S nitrogen
 #### Add auto execute to i3 config file
 ```
 exec always nitrogen --restore
+```
+
+## Add blur, transparency and visual effects using picom
+
+#### Install picom
+```
+sudo pacman -S picom
+```
+
+#### Add auto exection to i3 config file
+```
+exec picom
 ```
 
