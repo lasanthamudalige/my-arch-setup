@@ -3,6 +3,7 @@
 ## Table of contents
 * [First installs](#first-installs)
 * [Essential things to do after installing arch linux](#essential-things-to-do-after-installing-arch-linux)
+* [Customizing i3 setup](#customizing-i3-setup)
 
 ## First installs
 
@@ -104,3 +105,23 @@ sudo ufw status verbose
 ```
 sudo systemctl enable ufw.service
 ```
+
+## Customizing i3 setup
+
+### Install jetbrains-mono fonts
+```
+sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
+```
+
+### Set wallpaper woth nitrogen
+
+#### Install nitrogen
+```
+sudo pacman -S nitrogen
+```
+
+#### Add auto execute to i3 config file
+```
+exec always nitrogen --restore
+```
+
