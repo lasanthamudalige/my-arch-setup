@@ -8,12 +8,12 @@
 
 ## First installs
 
-1. Install firefox and kitty terminal:
+1. Install firefox and kitty terminal
 ```
 sudo pacman -S firefox kitty
 ```
 
-2. Open the config file:
+2. Open the config file
 ```
 sudo vim .config/i3/config
 ```
@@ -23,7 +23,7 @@ sudo vim .config/i3/config
 bindsym $mod+Return exec kitty
 ```
 
-4. Change "kill focused window" command from $mode+Shift+q to $mod+q:
+4. Change "kill focused window" command from $mode+Shift+q to $mod+q
 ```
 bindsym $mod+q kill
 ```
@@ -32,30 +32,30 @@ bindsym $mod+q kill
 
 ### Change pacman configuration
 
-1. Open the config file:
+1. Open the config file
 ```
 sudo vim /etc/pacman.conf
 ```
 
-- ***Uncomment "#Color" to change black and white***
-- ***Add "ILoveCandy" below it to change default install progress bar*** 
+- ***Uncomment "#Color" to change black and white.***
+- ***Add "ILoveCandy" below it to change default install progress bar.*** 
 
-2. Save the file.
+2. ***Save the file.***
 
 ##### Automatic cleaning the package cache
 
-1. Install paccache package:
+1. Install paccache package
 ```
 sudo pacman -S pacman-contrib
 ```
 
-2. Activate the paccache timer:
+2. Activate the paccache timer
 ```
 sudo systemctl enable paccache.timer
 ```
-  - This will clean package cache every week
+  - ***This will clean package cache every week.***
   
-##### Install Aur helper (yay):
+##### Install Aur helper (yay)
  ```
 sudo pacman -S --needed base-devel git
 mkdir Programs
@@ -66,202 +66,249 @@ makepkg -si
  ```
 ### Create user directory folders
 
-1. Install xdg-user-dirs:
+1. Install xdg-user-dirs
 ```
 sudo pacman -S xdg-user-dirs
 ```
 
-2. Run xdg-user-dirs to create direcotries:
+2. Run xdg-user-dirs to create direcotries
 ```
 xdg-user-dirs-update
 ```
 ### Install Microcode
 
-##### For AMD:
+For AMD processors
 ```
-sudo pacman -S amd-ucode # for AMD processors
+sudo pacman -S amd-ucode
 ```
 
-##### For Intel:
+For Intel processors
 ```
-sudo pacman -S intel-ucode # for Intel processors
+sudo pacman -S intel-ucode
 ```
 
 ### Set up firewall
 
-##### Install UFW:
+1. Install UFW
 ```
 sudo pacman -S ufw
 ```
 
-##### To enable UFW:
+2. Enable UFW
 ```
 sudo ufw enable
 ```
 
-##### To check status:
+3. To check status
 ```
 sudo ufw status verbose
 ```
 
-##### To auto start with the system:
+4. To auto start with the system
 ```
 sudo systemctl enable ufw.service
 ```
 
 ## Customizing i3 setup
 
-##### Install jetbrains-mono fonts to use in terminal and visual studio code terminal:
+### Install jetbrains-mono fonts to use in terminal and visual studio code terminal
 ```
 sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 ```
 
 ### Set wallpaper woth nitrogen
 
-##### Install nitrogen:
+1. Install nitrogen:
 ```
 sudo pacman -S nitrogen
 ```
 
-##### Add auto execute to i3 config file
+2. Add auto execute to i3 config file
 ```
 exec always nitrogen --restore
 ```
 
 ## Add blur, transparency and visual effects using picom
 
-##### Install picom:
+1. Install picom:
 ```
 sudo pacman -S picom
 ```
 
-##### Add auto exection to i3 config file:
+2. Add auto exection to i3 config file:
 ```
 exec picom
 ```
 
 ## Change gtk and qt5 themes
 
-##### Install lxappearance to manage gtk themes:
+1. Install lxappearance to manage gtk themes
 ```
 sudo pacman -S install lxappearance
 ```
 
-##### Install qt5ct to manage qt themes:
+2. Install qt5ct to manage qt themes
 ```
 sudo pacman -S qt5ct
 ```
-- If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"
+- ***If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"***
   - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct"
 
 ### Install themes to change everything to a dark background
 
-##### Install Adwaita and Adwaita-dark themes for gtk applications:
+1. Install Adwaita and Adwaita-dark themes for gtk applications:
 ```
 sudo pacman -S gnome-themes-extra
 ```
 
-##### Install kvantum theme for qt applications::
+2. Install kvantum theme for qt applications:
 ```
 sudo pacman -S kvantum
 ```
 
 ## Installing necessey applications
 
-#### Brightnesstcl - Brightess adjustment program to adjust brightss in laptops using hot keys
+- Brightnesstcl - Brightess adjustment program to adjust brightss in laptops using hot keys
 
-Install Brightnesstcl:
-```
-sudo pacman -S brightnesstcl # Run this to install
-```
+  1. Install Brightnesstcl
+  ```
+  sudo pacman -S brightnesstcl # Run this to install
+  ```
 
-- Add these commands to i3 config to use Brightnesstcl:
-```
-# Brightness up
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-# Brightness down
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
-```
+  2. Add these commands to i3 config to use Brightnesstcl
+  ```
+  # Brightness up
+  bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+  # Brightness down
+  bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+  ```
 
-#### Rofi application launcher - Modern application launcher to replace demenu
+- Rofi application launcher - Modern application launcher to replace demenu
 
-Install Rofi:
-```
-sudo pacman -S rofi
-```
+  1. Install Rofi:
+  ```
+  sudo pacman -S rofi
+  ```
 
-- comment out this demenu command in i3 config file:
-```
-bindsym $mod+d exec --no-startup-id dmenu_run
-```
+  2. comment out this demenu command in i3 config file
+  ```
+  bindsym $mod+d exec --no-startup-id dmenu_run
+  ```
 
-- Add this command to i3 config file to launch rofi using $mode+d:
-```
-bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
-```
+  3. Add this command to i3 config file to launch rofi using $mode+d:
+  ```
+  bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
+  ```
 
-#### Htop - terminal system monitor
+- Htop - terminal system monitor
 
-Install Htop:
-```
-sudo pacman -S htop
-```
+  Install Htop
+    ```
+    sudo pacman -S htop
+    ```
 
-#### screenfetch - System information program
+- screenfetch - System information program
 
-Install screenfetch:
-```
-sudo pacman -S screenfetch
-```
+  Install screenfetch
+    ```
+    sudo pacman -S screenfetch
+    ```
 
-#### feh - Commandline image viewer
+- feh - Commandline image viewer
 
-Install feh:
-```
-sudo pacman -S feh
-```
+  Install feh
+    ```
+    sudo pacman -S feh
+    ```
 
-#### TLP - Linux power manager of laptops
+- TLP - Linux power manager of laptops
 
-Install TLP:
-```
-sudo pacman tlp tlp-rdw # (tlp-rdw - Radio Device Wizard) 
-```
+  1. Install TLP
+  ```
+  sudo pacman tlp tlp-rdw # (tlp-rdw - Radio Device Wizard) 
+  ```
 
-- Radio Device Wizard provides the capability to enable or disable builtin bluetooth, Wi-Fi and WWAN devices triggered by certain events.
+   ***Radio Device Wizard provides the capability to enable or disable builtin bluetooth, Wi-Fi and WWAN devices triggered by certain events.***
 
-- Enable TLP:
-```
-systemctl enable tlp.service
-```
+  2. Enable TLP
+  ```
+  systemctl enable tlp.service
+  ```
 
-- tlp-rdw(Radio Device Wizard) need one more service enable it using:
-```
-systemctl enable NetworkManager-dispatcher.service
-```
+  3. tlp-rdw(Radio Device Wizard) need one more service enable it using
+  ```
+  systemctl enable NetworkManager-dispatcher.service
+  ```
 
-- Mask the following services to avoid conflicts and assure proper operation of tlp-rdw(Radio Device Wizard):
-```
-systemctl mask systemd-rfkill.service systemd-rfkill.socket
-```
+  4. Mask the following services to avoid conflicts and assure proper operation of tlp-rdw(Radio Device Wizard)
+  ```
+  systemctl mask systemd-rfkill.service systemd-rfkill.socket
+  ```
+  
+- i3lock - Lock screen for i3wm
 
-#### Dolphin file manager - KDE default file manager
+- Redshift - Adjust screen color temperature accodring to the time
 
-Install dolphin file manager
-```
-sudo pacman dolphin dolphin-plugins # extra plugins to use in the file manager
-```
+- Flameshot - Screenshot tool
 
-#### Okular - KDE default document viewer
+  1. Install flameshot
+  ```
+  sudo pacman -S flameshot
+  ```
+    
+  2. Add this command to i3 config to exectute flameshote from printscreen button
+  ```
+  bindsym Print exec "flameshot gui"
+  ```
 
-Install Okular
-```
-sudo pacman -S okular
-```
+- CopyQ - A clipboard manager
+  
+  1. Install CopyQ
+  ```
+  sudo pacman -S copyq
+  ```
+  2. Add this command to i3 config file to start CopyQ on boot
+  ```
+  exec --no-startup-id copyq
+  ```
 
-#### Kate - KDE default text editor
+- Clementine - Audio player
+    ```
+    sudo pacman -S clementine
+    ```
 
-Install Kate
-```
-sudo pacman -S kate
-```
+- VLC - Vedio player
+    ```
+    sudo pacman -S vlc
+    ```
+
+- Transmission - Torrent client
+    ```
+    sudo pacman -S transmission-gtk # Transmission with gtk theme
+    ```
+
+- GPicview - Image viewer
+    ```
+    sudo pacman -S gpicview
+    ```
+
+- Dolphin file manager - KDE default file manager
+
+  Install dolphin file manager
+    ```
+    sudo pacman dolphin dolphin-plugins # extra plugins to use in the file manager
+    ```
+
+- Okular - KDE default document viewer
+
+  Install Okular
+  ```
+  sudo pacman -S okular
+  ```
+
+- Kate - KDE default text editor
+
+  Install Kate
+  ```
+  sudo pacman -S kate
+  ```
