@@ -352,7 +352,7 @@ sudo pacman -S kvantum
   
 1. Clone the repo
   ```
-  https://github.com/lasanthamudalige/my-arch-setup.git
+  git clone https://github.com/lasanthamudalige/my-arch-setup.git
   ```
 2. Move config files
 
@@ -406,10 +406,10 @@ sudo pacman -S kvantum
      
    - For Laptops
      ```
-     sudo pacman -S
+     sudo pacman -S brghtnesstcl rofi htop screenfetch feh tlp ntfs-3g i3lock redshift geoclue2 flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
      ```
      
    - For Desktops
      ```
-     sudo pacman -S
+     sudo pacman -S rofi htop screenfetch feh ntfs-3g i3lock redshift geoclue2 flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
      ```
