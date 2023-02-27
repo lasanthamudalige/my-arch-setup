@@ -8,22 +8,22 @@
 
 ## First installs
 
-#### Install firefox and kitty terminal
+1. Install firefox and kitty terminal:
 ```
 sudo pacman -S firefox kitty
 ```
 
-#### Open the config file
+2. Open the config file:
 ```
 sudo vim .config/i3/config
 ```
 
-#### Change default terminal to kitty terminal
+3. Change default terminal to kitty terminal
 ```
 bindsym $mod+Return exec kitty
 ```
 
-#### Change "kill focused window" command from $mode+Shift+q to $mod+q
+4. Change "kill focused window" command from $mode+Shift+q to $mod+q:
 ```
 bindsym $mod+q kill
 ```
@@ -32,28 +32,30 @@ bindsym $mod+q kill
 
 ### Change pacman configuration
 
-#### Open the config file
+1. Open the config file:
 ```
 sudo vim /etc/pacman.conf
 ```
 
-* Uncomment "#Color" to change black and white.
-* Add "ILoveCandy" below it to change default install progress bar 
+- ***Uncomment "#Color" to change black and white***
+- ***Add "ILoveCandy" below it to change default install progress bar*** 
 
-### Automatic cleaning the package cache
+2. Save the file.
 
-#### Install paccache package
+##### Automatic cleaning the package cache
+
+1. Install paccache package:
 ```
 sudo pacman -S pacman-contrib
 ```
 
-#### Activate the paccache timer
+2. Activate the paccache timer:
 ```
 sudo systemctl enable paccache.timer
 ```
   - This will clean package cache every week
   
-### Install Aur helper (yay)
+##### Install Aur helper (yay):
  ```
 sudo pacman -S --needed base-devel git
 mkdir Programs
@@ -64,88 +66,88 @@ makepkg -si
  ```
 ### Create user directory folders
 
-#### Install xdg-user-dirs
+1. Install xdg-user-dirs:
 ```
 sudo pacman -S xdg-user-dirs
 ```
 
-#### Run xdg-user-dirs
+2. Run xdg-user-dirs to create direcotries:
 ```
 xdg-user-dirs-update
 ```
 ### Install Microcode
 
-#### For AMD
+##### For AMD:
 ```
 sudo pacman -S amd-ucode # for AMD processors
 ```
 
-#### For Intel
+##### For Intel:
 ```
 sudo pacman -S intel-ucode # for Intel processors
 ```
 
 ### Set up firewall
 
-#### Install UFW
+##### Install UFW:
 ```
 sudo pacman -S ufw
 ```
 
-#### To enable UFW
+##### To enable UFW:
 ```
 sudo ufw enable
 ```
 
-#### To check status
+##### To check status:
 ```
 sudo ufw status verbose
 ```
 
-#### To auto start with the system
+##### To auto start with the system:
 ```
 sudo systemctl enable ufw.service
 ```
 
 ## Customizing i3 setup
 
-### Install jetbrains-mono fonts to use in terminal and visual studio code terminal
+##### Install jetbrains-mono fonts to use in terminal and visual studio code terminal:
 ```
 sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 ```
 
 ### Set wallpaper woth nitrogen
 
-#### Install nitrogen
+##### Install nitrogen:
 ```
 sudo pacman -S nitrogen
 ```
 
-#### Add auto execute to i3 config file
+##### Add auto execute to i3 config file
 ```
 exec always nitrogen --restore
 ```
 
 ## Add blur, transparency and visual effects using picom
 
-### Install picom
+##### Install picom:
 ```
 sudo pacman -S picom
 ```
 
-### Add auto exection to i3 config file
+##### Add auto exection to i3 config file:
 ```
 exec picom
 ```
 
 ## Change gtk and qt5 themes
 
-### Install lxappearance to manage gtk themes
+##### Install lxappearance to manage gtk themes:
 ```
 sudo pacman -S install lxappearance
 ```
 
-### Install qt5ct to manage qt themes
+##### Install qt5ct to manage qt themes:
 ```
 sudo pacman -S qt5ct
 ```
@@ -154,26 +156,26 @@ sudo pacman -S qt5ct
 
 ### Install themes to change everything to a dark background
 
-#### Install Adwaita and Adwaita-dark themes for gtk applications
+##### Install Adwaita and Adwaita-dark themes for gtk applications:
 ```
 sudo pacman -S gnome-themes-extra
 ```
 
-#### Install kvantum theme for qt applications
+##### Install kvantum theme for qt applications::
 ```
 sudo pacman -S kvantum
 ```
 
 ## Installing necessey applications
 
-#### Brightnesstcl - brightess adjustment program to adjust brightss in laptops using hot keys
+#### Brightnesstcl - Brightess adjustment program to adjust brightss in laptops using hot keys
 
-Install brightnesstcl
+Install Brightnesstcl:
 ```
 sudo pacman -S brightnesstcl # Run this to install
 ```
 
-- Add these commands to i3 config to use Brightnesstcl
+- Add these commands to i3 config to use Brightnesstcl:
 ```
 # Brightness up
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
@@ -181,28 +183,85 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 ```
 
-#### Rofi application launcher - modern application launcher to replace demenu
+#### Rofi application launcher - Modern application launcher to replace demenu
 
-Install Rofi
+Install Rofi:
 ```
 sudo pacman -S rofi
 ```
 
-- comment out this demenu command in i3 config file
+- comment out this demenu command in i3 config file:
 ```
 bindsym $mod+d exec --no-startup-id dmenu_run
 ```
 
-- Add this command to i3 config file to launch rofi on $mode+d  
+- Add this command to i3 config file to launch rofi using $mode+d:
 ```
 bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
 ```
 
-#### Dolphin file manager
-This is file manager in kde to hande files in a GUI
+#### Htop - terminal system monitor
 
-##### Install dolphin file manager
+Install Htop:
+```
+sudo pacman -S htop
+```
+
+#### screenfetch - System information program
+
+Install screenfetch:
+```
+sudo pacman -S screenfetch
+```
+
+#### feh - Commandline image viewer
+
+Install feh:
+```
+sudo pacman -S feh
+```
+
+#### TLP - Linux power manager of laptops
+
+Install TLP:
+```
+sudo pacman tlp tlp-rdw # (tlp-rdw - Radio Device Wizard) 
+```
+
+- Radio Device Wizard provides the capability to enable or disable builtin bluetooth, Wi-Fi and WWAN devices triggered by certain events.
+
+- Enable TLP:
+```
+systemctl enable tlp.service
+```
+
+- tlp-rdw(Radio Device Wizard) need one more service enable it using:
+```
+systemctl enable NetworkManager-dispatcher.service
+```
+
+- Mask the following services to avoid conflicts and assure proper operation of tlp-rdw(Radio Device Wizard):
+```
+systemctl mask systemd-rfkill.service systemd-rfkill.socket
+```
+
+#### Dolphin file manager - KDE default file manager
+
+Install dolphin file manager
 ```
 sudo pacman dolphin dolphin-plugins # extra plugins to use in the file manager
 ```
 
+#### Okular - KDE default document viewer
+
+Install Okular
+```
+sudo pacman -S okular
+```
+
+#### Kate - KDE default text editor
+
+Install Kate
+```
+sudo pacman -S kate
+```
