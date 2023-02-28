@@ -1,10 +1,18 @@
 # How i configured my first arch i3 setup
 
 ## Table of contents
+* [Arch install summery](#arch-install-summery)
 * [First installs](#first-installs)
 * [Essential things to do after installing arch linux](#essential-things-to-do-after-installing-arch-linux)
 * [Customizing i3 setup](#customizing-i3-setup)
 * [ Installing necessey applications ](#installing-necessey-applications)
+* [Using dotfiles](#using-dotfiles)
+
+## Arch install summery
+  - Disk partition - ext4 with encryption
+  - kernel - LTS kernel
+  - Desktop - i3-gaps
+  - Sound - pulseaudio
 
 ## First installs
 
@@ -125,7 +133,7 @@ sudo pacman -S nitrogen
 
 2. Add this command to i3 config file to restore the wallpaper on the screen after reboot
 ```
-exec always nitrogen --restore
+exec --no-startup-id nitrogen --restore
 ```
 
 ## Add blur, transparency and visual effects using picom
@@ -137,7 +145,7 @@ sudo pacman -S picom
 
 2. Add auto exection to i3 config file:
 ```
-exec picom
+exec --no-startup-id picom
 ```
 
 ## Change gtk and qt5 themes
@@ -247,6 +255,13 @@ sudo pacman -S kvantum
   systemctl mask systemd-rfkill.service systemd-rfkill.socket
   ```
   
+- ntfs-3g - ntfs partition support for arch
+    
+   Install ntfs-3g 
+    ```
+    sudo pacman -S ntfs-3g
+    ```
+  
 - i3lock - Lock screen for i3wm
   
   1. Install i3lock
@@ -329,3 +344,72 @@ sudo pacman -S kvantum
   ```
   sudo pacman -S kate
   ```
+  
+  ***More apps to install***
+  ![AzmCYZ3](https://user-images.githubusercontent.com/91461938/221640326-aed2b07f-d110-487c-a549-9b13ddda80ed.jpg)
+  
+## Using dotfiles
+  
+1. Clone the repo
+  ```
+  git clone https://github.com/lasanthamudalige/my-arch-setup.git
+  ```
+2. Move config files
+
+    - Move i3 folder to "~/.config" folder
+      ```
+      sudo mv i3/ .config/
+      ```
+      
+    - Move i3status.conf to "/etc" folder
+      ```
+      sudo mv i3status.conf /etc/
+      ```
+        
+     - Move kitty.conf to "~/.config/kitty" folder
+       ```
+       sudo mv kitty.conf .config/kitty/
+       ```
+        
+       ***If there is no kitty folder make one inside ".config" folder***
+        
+          - cd into ".config" folder
+            ```
+            cd .config/
+            ```
+              
+          - Make a kitty folder
+            ```
+            mkdir kitty 
+            ```
+        
+     - Move picom.conf to "~/.config/picom" folder
+       ```
+       sudo mv picom.conf .config/picom/
+       ```
+        
+       ***If there is no picom folder make one inside ".config" folder***
+          
+          - cd into .config folder
+            ```
+            cd .config/
+            ```
+              
+          - Make picom folder
+            ```
+            mkdir picom
+            ```
+        
+3. [Do essential things](#essential-things-to-do-after-installing-arch-linux)
+  
+4. Install necessary applications 
+     
+   - For Laptops
+     ```
+     sudo pacman -S brghtnesstcl rofi htop screenfetch feh tlp ntfs-3g i3lock redshift geoclue2 flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+     ```
+     
+   - For Desktops
+     ```
+     sudo pacman -S rofi htop screenfetch feh ntfs-3g i3lock redshift geoclue2 flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+     ```
