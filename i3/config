@@ -232,8 +232,8 @@ bindsym $mod+BackSpace mode "$mode_system"
 
 
 # scree brigthness adjustment using light(this is for laptops hot keys)
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # Increase brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # Decrease brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # Increase brightness by 5%
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # Decrease brightness by 5%
 
 # add wallpaper using nitrogen
 # restore wallpaper on restart
@@ -245,8 +245,8 @@ exec --no-startup-id  picom
 # start clipq on boot
 exec --no-startup-id clipq
 
-# Start redshift with custom location
-#exec --no-startup-id redshift -l 7.237472:80.282722
+# Start redshift with current location mozila location service
+exec redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
 
 exec --no-startup-id redshift
 
