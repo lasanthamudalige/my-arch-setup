@@ -20,24 +20,24 @@
 ## First installs
 
 1. Install firefox and kitty terminal
-```
-sudo pacman -S firefox kitty
-```
+    ```
+    sudo pacman -S firefox kitty
+    ```
 
 2. Open the config file
-```
-sudo vim .config/i3/config
-```
+    ```
+    sudo vim .config/i3/config
+    ```
 
 3. Change default terminal to kitty terminal
-```
-bindsym $mod+Return exec kitty
-```
+    ```
+    bindsym $mod+Return exec kitty
+    ```
 
 4. Change "kill focused window" command from $mode+Shift+q to $mod+q
-```
-bindsym $mod+q kill
-```
+    ```
+    bindsym $mod+q kill
+    ```
 
 ## Essential things to do after installing arch linux
 
@@ -56,14 +56,14 @@ sudo vim /etc/pacman.conf
 ### Automatic cleaning the package cache
 
 1. Install paccache package
-```
-sudo pacman -S pacman-contrib
-```
+    ```
+    sudo pacman -S pacman-contrib
+    ```
 
 2. Activate the paccache timer
-```
-sudo systemctl enable paccache.timer
-```
+    ```
+    sudo systemctl enable paccache.timer
+    ```
   - ***This will clean package cache every week.***
   
 ### Install Aur helper (yay)
@@ -78,14 +78,14 @@ makepkg -si
 ### Create user directory folders
 
 1. Install xdg-user-dirs
-```
-sudo pacman -S xdg-user-dirs
-```
+    ```
+    sudo pacman -S xdg-user-dirs
+    ```
 
 2. Run xdg-user-dirs to create direcotries
-```
-xdg-user-dirs-update
-```
+    ```
+    xdg-user-dirs-update
+    ```
 ### Install Microcode
 
 For AMD processors
@@ -101,24 +101,24 @@ sudo pacman -S intel-ucode
 ### Set up firewall
 
 1. Install UFW
-```
-sudo pacman -S ufw
-```
+    ```
+    sudo pacman -S ufw
+    ```
 
 2. Enable UFW
-```
-sudo ufw enable
-```
+    ```
+    sudo ufw enable
+    ```
 
 3. To check status
-```
-sudo ufw status verbose
-```
+    ```
+    sudo ufw status verbose
+    ```
 
 4. To auto start with the system
-```
-sudo systemctl enable ufw.service
-```
+    ```
+    sudo systemctl enable ufw.service
+    ```
 
 ## Customizing i3 setup
 
@@ -130,38 +130,38 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 ### Set wallpaper with nitrogen
 
 1. Install nitrogen:
-```
-sudo pacman -S nitrogen
-```
+    ```
+    sudo pacman -S nitrogen
+    ```
 
 2. Add this command to i3 config file to restore the wallpaper on the screen after reboot
-```
-exec --no-startup-id nitrogen --restore
-```
+    ```
+    exec --no-startup-id nitrogen --restore
+    ```
 
 ## Add blur, transparency and visual effects using picom
 
 1. Install picom:
-```
-sudo pacman -S picom
-```
+    ```
+    sudo pacman -S picom
+    ```
 
 2. Add auto exection to i3 config file:
-```
-exec --no-startup-id picom
-```
+    ```
+    exec --no-startup-id picom
+    ```
 
 ## Change gtk and qt5 themes
 
 1. Install lxappearance to manage gtk themes
-```
-sudo pacman -S install lxappearance
-```
+    ```
+    sudo pacman -S install lxappearance
+    ```
 
 2. Install qt5ct to manage qt themes
-```
-sudo pacman -S qt5ct
-```
+    ```
+    sudo pacman -S qt5ct
+    ```
 - ***If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"***
     - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct" line to it using
       ```
@@ -171,29 +171,29 @@ sudo pacman -S qt5ct
 ### Install themes to change everything to a dark background
 
 1. Install Adwaita and Adwaita-dark themes for gtk applications:
-```
-sudo pacman -S gnome-themes-extra
-```
+    ```
+    sudo pacman -S gnome-themes-extra
+    ```
 
 2. Install kvantum theme for qt applications:
-```
-sudo pacman -S kvantum breeze # Breeze icons pack to show icons
-```
+    ```
+    sudo pacman -S kvantum breeze # Breeze icons pack to show icons
+    ```
 
 ## Installing necessey applications
 
 - Brightnesstcl - Brightess adjustment program to adjust brightss in laptops using hot keys
 
   1. Install light
-  ```
-  sudo pacman -S light # Run this to install
-  ```
+      ```
+      sudo pacman -S light # Run this to install
+      ```
 
   2. Add these commands to i3 config to use Brightnesstcl
-  ```
-  bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # Increase brightness by 5%
-  bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # Decrease brightness by 5%
-  ```
+      ```
+      bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # Increase brightness by 5%
+      bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # Decrease brightness by 5%
+      ```
 
 - Rofi application launcher - Modern application launcher to replace demenu
 
