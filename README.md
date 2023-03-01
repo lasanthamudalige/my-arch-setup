@@ -128,9 +128,9 @@ sudo pacman -S intel-ucode
 
 ## Customizing i3 setup
 
-### Install jetbrains-mono fonts to use in terminal and visual studio code terminal
+### Install fonts to use in terminal and visual studio code terminal
 ```
-sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
+sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 ```
 
 ### Set wallpaper with nitrogen
@@ -501,7 +501,7 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
     
     - Install cutomizing programs
       ```
-      sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd nitrogen picom lxappearance qt5ct gnome-themes-extra kvantum breeze
+      sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code nitrogen picom lxappearance qt5ct gnome-themes-extra kvantum breeze
       ```
     - ***If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"***
       - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct" line to it using
