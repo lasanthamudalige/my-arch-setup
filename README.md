@@ -191,149 +191,159 @@ sudo pacman -S kvantum breeze # Breeze icons pack to show icons
 
   2. Add these commands to i3 config to use Brightnesstcl
   ```
-  # Brightness up
-  bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-  # Brightness down
-  bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+  bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # Increase brightness by 5%
+  bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # Decrease brightness by 5%
   ```
 
 - Rofi application launcher - Modern application launcher to replace demenu
 
   1. Install Rofi:
-  ```
-  sudo pacman -S rofi
-  ```
+      ```
+      sudo pacman -S rofi
+      ```
 
   2. comment out this demenu command in i3 config file
-  ```
-  bindsym $mod+d exec --no-startup-id dmenu_run
-  ```
+      ```
+      bindsym $mod+d exec --no-startup-id dmenu_run
+      ```
 
   3. Add this command to i3 config file to launch rofi using $mode+d:
-  ```
-  bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
-  ```
+      ```
+      bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
+      ```
 
 - Htop - terminal system monitor
 
   Install Htop
-    ```
-    sudo pacman -S htop
-    ```
+  ```
+  sudo pacman -S htop
+  ```
 
 - screenfetch - System information program
 
   Install screenfetch
-    ```
-    sudo pacman -S screenfetch
-    ```
+  ```
+  sudo pacman -S screenfetch
+  ```
 
 - feh - Commandline image viewer
 
   Install feh
-    ```
-    sudo pacman -S feh
-    ```
+  ```
+  sudo pacman -S feh
+  ```
 
 - TLP - Linux power manager of laptops
 
   1. Install TLP
-  ```
-  sudo pacman tlp tlp-rdw # (tlp-rdw - Radio Device Wizard) 
-  ```
+      ```
+      sudo pacman tlp tlp-rdw # (tlp-rdw - Radio Device Wizard) 
+      ```
 
    ***Radio Device Wizard provides the capability to enable or disable builtin bluetooth, Wi-Fi and WWAN devices triggered by certain events.***
 
   2. Enable TLP
-  ```
-  systemctl enable tlp.service
-  ```
+      ```
+      systemctl enable tlp.service
+      ```
 
   3. tlp-rdw(Radio Device Wizard) need one more service enable it using
-  ```
-  systemctl enable NetworkManager-dispatcher.service
-  ```
+      ```
+      systemctl enable NetworkManager-dispatcher.service
+      ```
 
   4. Mask the following services to avoid conflicts and assure proper operation of tlp-rdw(Radio Device Wizard)
-  ```
-  systemctl mask systemd-rfkill.service systemd-rfkill.socket
-  ```
+      ```
+      systemctl mask systemd-rfkill.service systemd-rfkill.socket
+      ```
   
 - ntfs-3g - ntfs partition support for arch
     
    Install ntfs-3g 
-    ```
-    sudo pacman -S ntfs-3g
-    ```
+   ```
+   sudo pacman -S ntfs-3g
+   ```
   
 - i3lock - Lock screen for i3wm
   
-  1. Install i3lock
+  Install i3lock
   ```
   sudo pacman -S i3lock
   ```
+  
+- xss-lock - To detect suspend to autolock the screen
+  
 
 - Redshift - Adjust screen color temperature accodring to the time
 
   1. Install redshift and geoclue2 to find location
-  ```
-  sudo pacman -S redshift geoclue2
-  ```
+      ```
+      sudo pacman -S redshift geoclue2
+      ```
   
-  2. Add redshift to i3 config file to run on boot
-  ```
-  exec --no-startup-id redshift
-  ```
+  2. Add redshift to i3 config file to run on boot by using mozila location services
+      ```
+      exec redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
+      ```
 
 - Flameshot - Screenshot tool
 
   1. Install flameshot
-  ```
-  sudo pacman -S flameshot
-  ```
+      ```
+      sudo pacman -S flameshot
+      ```
     
   2. Add this command to i3 config to exectute flameshote from printscreen button
-  ```
-  bindsym Print exec "flameshot gui"
-  ```
+      ```
+      bindsym Print exec "flameshot gui"
+      ```
 
 - CopyQ - A clipboard manager
   
   1. Install CopyQ
-  ```
-  sudo pacman -S copyq
-  ```
+      ```
+      sudo pacman -S copyq
+      ```
+
   2. Add this command to i3 config file to start CopyQ on boot
-  ```
-  exec --no-startup-id copyq
-  ```
+      ```
+      exec --no-startup-id copyq
+      ```
 
 - Clementine - Audio player
-    ```
-    sudo pacman -S clementine
-    ```
+  
+  Install celementine
+  ```
+  sudo pacman -S clementine
+  ```
 
 - VLC - Vedio player
-    ```
-    sudo pacman -S vlc
-    ```
+    
+  Install vlc
+  ```
+  sudo pacman -S vlc
+  ```
 
 - Transmission - Torrent client
-    ```
-    sudo pacman -S transmission-gtk # Transmission with gtk theme
-    ```
+  
+  Install transmission
+  ```
+  sudo pacman -S transmission-gtk # Transmission with gtk theme
+  ```
 
 - GPicview - Image viewer
-    ```
-    sudo pacman -S gpicview
-    ```
+  
+  Install gpicview
+  ```
+  sudo pacman -S gpicview
+  ```
 
 - Dolphin file manager - KDE default file manager
 
   Install dolphin file manager
-    ```
-    sudo pacman dolphin dolphin-plugins # extra plugins to use in the file manager
-    ```
+  ```
+  sudo pacman dolphin dolphin-plugins # extra plugins to use in the file manager
+  ```
 
 - Okular - KDE default document viewer
 
@@ -354,7 +364,7 @@ sudo pacman -S kvantum breeze # Breeze icons pack to show icons
   
 ## Using dotfiles
 
-***Install firefox and kitty terminal if not installed
+***Install firefox and kitty terminal if not installed***
   
 1. Clone the repo
   ```
