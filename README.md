@@ -8,9 +8,10 @@
 * [ Installing necessey applications ](#installing-necessey-applications)
 * [Using dotfiles](#using-dotfiles)
 
-***I installed it using archinstall***
 
 ## Arch install summery
+
+***I installed it using archinstall***
   - Disk partition - ext4 with encryption
   - kernel - LTS kernel
   - Desktop - i3-gaps
@@ -162,9 +163,10 @@ sudo pacman -S install lxappearance
 sudo pacman -S qt5ct
 ```
 - ***If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"***
-  - create a ".profile" file in home directory
-  - Add "export QT_QPA_PLATFORMTHEME="qt5ct"
-  - ***Save it***
+      - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct" line to it using
+      ```
+      echo 'export QT_QPA_PLATFORMTHEME="qt5ct' > ~/.profile
+      ```
 
 ### Install themes to change everything to a dark background
 
@@ -477,5 +479,5 @@ sudo pacman -S kvantum breeze # Breeze icons pack to show icons
      
    - For Desktops
      ```
-     sudo pacman -S rofi htop screenfetch feh ntfs-3g i3lock redshift geoclue2 flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+     sudo pacman -S rofi htop screenfetch feh ntfs-3g i3lock redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
      ```
