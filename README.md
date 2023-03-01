@@ -20,7 +20,7 @@
 
 ## First installs
 
-1. Install firefox and kitty terminal
+1. Install firefox, kitty terminal and git
     ```
     sudo pacman -S firefox kitty
     ```
@@ -87,7 +87,7 @@ makepkg -si
     ```
     xdg-user-dirs-update
     ```
-~~### Install Microcode( No need for desktops as it will ask to select this in install)~~
+### Install Microcode( No need for desktops as it will ask to select this in install)
 
 For AMD processors
 ```
@@ -140,7 +140,7 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
     exec --no-startup-id nitrogen --restore
     ```
 
-## Add blur, transparency and visual effects using picom
+### Add blur, transparency and visual effects using picom
 
 1. Install picom:
     ```
@@ -152,7 +152,7 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
     exec --no-startup-id picom
     ```
 
-## Change gtk and qt5 themes
+### Change gtk and qt5 themes
 
 1. Install lxappearance to manage gtk themes
     ```
@@ -388,7 +388,7 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
   
 ## Using dotfiles
 
-***Install firefox and kitty terminal if not installed***
+***Install firefox, kitty terminal and git if not installed***
   
 1. Clone the repo
   ```
