@@ -560,7 +560,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
       
   - Change shell to fish
       ```
-      sudo chsh -s /usr/bin/fish
+      chsh -s /usr/bin/fish
       ```
       
 ### Install google chrome, visual studio code with yay
