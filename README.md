@@ -92,7 +92,7 @@ makepkg -si
     ```
     xdg-user-dirs-update
     ```
-### Install Microcode( No need for desktops as it will ask to select this in install)
+### Install Microcode( No need for desktops as it will ask to select this in the install)
 
 For AMD processors
 ```
@@ -188,7 +188,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 
 ## Installing necessey applications
 
-- Brightnesstcl - Brightess adjustment program to adjust brightss in laptops using hot keys
+- Light - Brightess adjustment program to adjust brightss in laptops using hot keys
 
   1. Install light
       ```
@@ -203,7 +203,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   
   3. Run this command to get proper usage permission and ***Restart*** to get for it to work
       ```
-      sudo usermod -aG video <user>
+      sudo usermod -aG video lasantha # Replace "lasantha" with your username
       ```
 
 - Rofi application launcher - Modern application launcher to replace demenu
@@ -519,7 +519,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
        ```
      - Run this command for backlight adjusment to work
        ```
-       sudo usermod -aG video <user>
+       sudo usermod -aG video lasantha # Replace "lasantha" with your username
        ```
        
      - To enable TLP
@@ -567,6 +567,31 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 ```
 yay -S google-chrome visual-studio-code-bin
 ```
+
+### Install programming stuff
+  
+  - Generate ssh key for github
+    ```
+    # Generate a new ssh key
+    ssh-keygen -t ed25519 -C "lasantha1130@gmail.com" # Add your email here by replacing "lasantha1130@gmail.com"
+
+    # Add ssh key to ssh-agent
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+
+    # Print ssh public key to clipboard
+    cat ~/.ssh/id_ed25519.pub
+    ```
+
+  - Install python
+    ```
+    sudo pacman -S python tk python-pip # python-tk python-pip packages
+    ```
+  
+  - Install nvm 
+    ```
+    wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
+    ```
 
 ## Screenshots
 
