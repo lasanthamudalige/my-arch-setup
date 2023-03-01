@@ -194,6 +194,11 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
       bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # Increase brightness by 5%
       bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # Decrease brightness by 5%
       ```
+  
+  3. Run this command to get proper usage permission and ***Restart*** to get for it to work
+      ```
+      sudo usermod -aG video <user>
+      ```
 
 - Rofi application launcher - Modern application launcher to replace demenu
 
@@ -489,10 +494,28 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
      
    - For Laptops
      ```
-     sudo pacman -S light rofi htop screenfetch feh tlp ntfs-3g i3lock xss-lock redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+     sudo pacman -S light rofi htop screenfetch feh tlp ntfs-3g i3lock xss-lock scrot imagemagick redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
      ```
+        - Run this command for backlight adjusment to work
+            ```
+            sudo usermod -aG video <user>
+            ```
+        - To enable TLP
+          ```
+          systemctl enable tlp.service
+          ```
+
+      - tlp-rdw(Radio Device Wizard) need one more service enable it using
+          ```
+          systemctl enable NetworkManager-dispatcher.service
+          ```
+
+      - Mask the following services to avoid conflicts and assure proper operation of tlp-rdw(Radio Device Wizard)
+          ```
+          systemctl mask systemd-rfkill.service systemd-rfkill.socket
+          ``` 
      
    - For Desktops
      ```
-     sudo pacman -S rofi htop screenfetch feh ntfs-3g i3lock xss-lock redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+     sudo pacman -S rofi htop screenfetch feh ntfs-3g i3lock xss-lock scrot imagemagick redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
      ```
