@@ -272,6 +272,11 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
   ```
   
 - xss-lock - To detect suspend to autolock the screen
+
+  Install xss-lock
+  ```
+  sudo pacman -S xss-lock
+  ```
   
 
 - Redshift - Adjust screen color temperature accodring to the time
@@ -484,10 +489,10 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
      
    - For Laptops
      ```
-     sudo pacman -S light rofi htop screenfetch feh tlp ntfs-3g i3lock redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+     sudo pacman -S light rofi htop screenfetch feh tlp ntfs-3g i3lock xss-lock redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
      ```
      
    - For Desktops
      ```
-     sudo pacman -S rofi htop screenfetch feh ntfs-3g i3lock redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+     sudo pacman -S rofi htop screenfetch feh ntfs-3g i3lock xss-lock redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
      ```
