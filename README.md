@@ -230,7 +230,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   sudo pacman -S htop
   ```
 
-- screenfetch - System information program
+- Neofetch - System information program
 
   Install neofetch
   ```
