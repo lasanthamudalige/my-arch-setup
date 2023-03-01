@@ -262,6 +262,19 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
       ```
       systemctl mask systemd-rfkill.service systemd-rfkill.socket
       ```
+   
+- libinput - Touchpad driver for laptops
+  
+  1. Install libinput
+      ```
+      sudo pacman -S libinput
+      ```
+   
+  2. Move  "90-toucpad.conf" file to "xorg.conf.d" folder
+      ```
+      sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
+      ```
+  
   
 - ntfs-3g - ntfs partition support for arch
     
@@ -497,7 +510,7 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 
      - Install necessery programs using
        ```
-       sudo pacman -S light rofi htop screenfetch feh tlp ntfs-3g i3lock xss-lock scrot imagemagick redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+       sudo pacman -S light rofi htop screenfetch feh tlp libinput ntfs-3g i3lock xss-lock scrot imagemagick redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
        ```
      - Run this command for backlight adjusment to work
        ```
@@ -518,6 +531,11 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
        ```
        systemctl mask systemd-rfkill.service systemd-rfkill.socket
        ``` 
+       
+     - Move  "90-toucpad.conf" file to "xorg.conf.d" folder
+       ```
+       sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
+       ```
      
    - For Desktops
 
