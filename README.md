@@ -510,7 +510,7 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 
      - Install necessery programs using
        ```
-       sudo pacman -S light rofi htop screenfetch feh tlp libinput ntfs-3g i3lock xss-lock scrot imagemagick redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+       sudo pacman -S light rofi screenfetch feh tlp libinput ntfs-3g xss-lock scrot imagemagick redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
        ```
      - Run this command for backlight adjusment to work
        ```
@@ -541,7 +541,7 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 
      - Install necessery programs using
        ```
-       sudo pacman -S rofi htop screenfetch feh ntfs-3g i3lock xss-lock scrot imagemagick redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+       sudo pacman -S rofi screenfetch feh ntfs-3g xss-lock scrot imagemagick redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
        ```
        
 ## Other stuff
