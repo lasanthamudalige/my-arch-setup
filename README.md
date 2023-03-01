@@ -588,7 +588,7 @@ yay -S google-chrome visual-studio-code-bin
     sudo pacman -S python tk python-pip # python-tk python-pip packages
     ```
   
-  - Install nvm 
+  - Install nvm(Node version manager)
     ```
     wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
     ```
