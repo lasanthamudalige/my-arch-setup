@@ -13,10 +13,15 @@
 ## Arch install summery
 
 ***I installed it using archinstall***
-  - Disk partition - ext4 with encryption
-  - kernel - LTS kernel
-  - Desktop - i3-gaps
+  - Disk partition - ext4 with 2 partition with encryption
+  - profile - desktop with i3-gaps
   - Sound - pulseaudio
+  - kernel - LTS kernel
+  - Additional packages - 'firefox' 'kitty'
+  - Network configuration - NetworkManager
+  - Other settings are stock setting
+  
+  
 
 ## First installs
 
@@ -398,7 +403,7 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 
     - Move i3 folder to "~/.config" folder
       ```
-      sudo mv i3/ .config/
+      sudo mv i3/ ~/.config/
       ```
       
     - Move i3status.conf to "/etc" folder
@@ -408,14 +413,14 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
         
      - Move kitty.conf to "~/.config/kitty" folder
        ```
-       sudo mv kitty.conf .config/kitty/
+       sudo mv kitty.conf ~/.config/kitty/
        ```
         
        ***If there is no kitty folder make one inside ".config" folder***
         
           - cd into ".config" folder
             ```
-            cd .config/
+            cd ~/.config/
             ```
               
           - Make a kitty folder
@@ -425,14 +430,14 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
         
      - Move picom.conf to "~/.config/picom" folder
        ```
-       sudo mv picom.conf .config/picom/
+       sudo mv picom.conf ~/.config/picom/
        ```
         
        ***If there is no picom folder make one inside ".config" folder***
           
           - cd into .config folder
             ```
-            cd .config/
+            cd ~/.config/
             ```
               
           - Make picom folder
