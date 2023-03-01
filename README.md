@@ -7,6 +7,7 @@
 * [Customizing i3 setup](#customizing-i3-setup)
 * [ Installing necessey applications ](#installing-necessey-applications)
 * [Using dotfiles](#using-dotfiles)
+* [Other stuff](#other-stuff)
 
 
 ## Arch install summery
@@ -524,3 +525,30 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
        ```
        sudo pacman -S rofi htop screenfetch feh ntfs-3g i3lock xss-lock scrot imagemagick redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
        ```
+       
+## Other stuff
+
+### Change shell to fish
+
+  - Install fish shell
+      ```
+      sudo pacman -S fish
+      ```
+      
+  - Change shell to fish
+      ```
+      sudo chsh -s /usr/bin/fish
+      ```
+      
+### Install google chrome, visual studio code with yay
+```
+yay -S google-chrome visual-studio-code-bin
+```
+
+## Screenshots
+
+![image](https://user-images.githubusercontent.com/91461938/222118296-dd23517d-9333-46c3-9366-39965e5c8617.png)
+![image](https://user-images.githubusercontent.com/91461938/222118376-d9aad6c4-ff64-47b3-8b2a-8fec83cc7517.png)
+![image](https://user-images.githubusercontent.com/91461938/222118886-78ddf1bb-3cd3-42bd-8bcb-8f08b9ac6c0d.png)
+
+
