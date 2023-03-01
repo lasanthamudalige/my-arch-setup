@@ -47,7 +47,7 @@ bindsym $mod+q kill
 sudo vim /etc/pacman.conf
 ```
 
-- ***Uncomment "#Color" to change the black and white terminal to a colorsful one.***
+- ***Uncomment "#Color" to change the black and white terminal to a colorful one.***
 - ***Add "ILoveCandy" below it to change default install progress bar.*** 
 
 2. ***Save the file.***
@@ -175,7 +175,7 @@ sudo pacman -S gnome-themes-extra
 
 2. Install kvantum theme for qt applications:
 ```
-sudo pacman -S kvantum
+sudo pacman -S kvantum breeze # Breeze icons pack to show icons
 ```
 
 ## Installing necessey applications
@@ -351,6 +351,8 @@ sudo pacman -S kvantum
   ![AzmCYZ3](https://user-images.githubusercontent.com/91461938/221640326-aed2b07f-d110-487c-a549-9b13ddda80ed.jpg)
   
 ## Using dotfiles
+
+***Install firefox and kitty terminal if not installed
   
 1. Clone the repo
   ```
@@ -404,7 +406,7 @@ sudo pacman -S kvantum
         
 3. [Do essential things](#essential-things-to-do-after-installing-arch-linux)
   
-    - Install essential programs using:
+    - Install all  essential programs using:
       ```
       sudo pacman -S pacman-contrib xdg-user-dirs ufw
       ```
@@ -423,7 +425,7 @@ sudo pacman -S kvantum
           sudo vim /etc/pacman.conf
           ```
 
-      - ***Uncomment "#Color" to change the black and white terminal to a colorsful one.***
+      - ***Uncomment "#Color" to change the black and white terminal to a colorful one.***
       - ***Add "ILoveCandy" below it to change default install progress bar.*** 
 
       - ***Save the file.***  
@@ -458,7 +460,12 @@ sudo pacman -S kvantum
     
     - Install cutomizing programs
       ```
-      sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd nitrogen picom
+      sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd nitrogen picom lxappearance qt5ct gnome-themes-extra kvantum breeze
+      ```
+    - ***If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"***
+      - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct" line to it using
+      ```
+      echo 'export QT_QPA_PLATFORMTHEME="qt5ct' > ~/.profile
       ```
 
 5. Install necessary applications 
