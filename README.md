@@ -163,7 +163,7 @@ sudo pacman -S install lxappearance
 sudo pacman -S qt5ct
 ```
 - ***If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"***
-      - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct" line to it using
+    - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct" line to it using
       ```
       echo 'export QT_QPA_PLATFORMTHEME="qt5ct' > ~/.profile
       ```
