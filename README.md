@@ -180,9 +180,9 @@ sudo pacman -S kvantum
 
 - Brightnesstcl - Brightess adjustment program to adjust brightss in laptops using hot keys
 
-  1. Install Brightnesstcl
+  1. Install light
   ```
-  sudo pacman -S brightnesstcl # Run this to install
+  sudo pacman -S light # Run this to install
   ```
 
   2. Add these commands to i3 config to use Brightnesstcl
@@ -406,7 +406,7 @@ sudo pacman -S kvantum
      
    - For Laptops
      ```
-     sudo pacman -S brghtnesstcl rofi htop screenfetch feh tlp ntfs-3g i3lock redshift geoclue2 flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+     sudo pacman -S light rofi htop screenfetch feh tlp ntfs-3g i3lock redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
      ```
      
    - For Desktops
