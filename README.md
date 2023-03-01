@@ -20,7 +20,7 @@
 
 ## First installs
 
-1. Install firefox and kitty terminal
+1. Install firefox, kitty terminal and git
     ```
     sudo pacman -S firefox kitty
     ```
@@ -140,7 +140,7 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
     exec --no-startup-id nitrogen --restore
     ```
 
-## Add blur, transparency and visual effects using picom
+### Add blur, transparency and visual effects using picom
 
 1. Install picom:
     ```
@@ -152,7 +152,7 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
     exec --no-startup-id picom
     ```
 
-## Change gtk and qt5 themes
+### Change gtk and qt5 themes
 
 1. Install lxappearance to manage gtk themes
     ```
@@ -262,6 +262,19 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
       ```
       systemctl mask systemd-rfkill.service systemd-rfkill.socket
       ```
+   
+- libinput - Touchpad driver for laptops
+  
+  1. Install libinput
+      ```
+      sudo pacman -S libinput
+      ```
+   
+  2. Move  "90-toucpad.conf" file to "xorg.conf.d" folder
+      ```
+      sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
+      ```
+  
   
 - ntfs-3g - ntfs partition support for arch
     
@@ -375,7 +388,7 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
   
 ## Using dotfiles
 
-***Install firefox and kitty terminal if not installed***
+***Install firefox, kitty terminal and git if not installed***
   
 1. Clone the repo
   ```
@@ -497,7 +510,7 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 
      - Install necessery programs using
        ```
-       sudo pacman -S light rofi htop screenfetch feh tlp ntfs-3g i3lock xss-lock scrot imagemagick redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+       sudo pacman -S light rofi htop screenfetch feh tlp libinput ntfs-3g i3lock xss-lock scrot imagemagick redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
        ```
      - Run this command for backlight adjusment to work
        ```
@@ -518,6 +531,11 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
        ```
        systemctl mask systemd-rfkill.service systemd-rfkill.socket
        ``` 
+       
+     - Move  "90-toucpad.conf" file to "xorg.conf.d" folder
+       ```
+       sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
+       ```
      
    - For Desktops
 
