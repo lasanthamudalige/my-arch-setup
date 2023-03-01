@@ -30,9 +30,15 @@ exec --no-startup-id dex --autostart --environment i3
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
+# custom lock screen wallpaper for i3lock
+# this will capture the screen and save it to the lock screen using a custom script
+# assign lock.sh to $i3lockwall
+set $i3lockwall sh ~/.config/i3/scripts/lock.sh
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# lock the screen with the $i3lockwall custom script
+exec --no-startup-id xss-lock --$i3lockwall
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -187,8 +193,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
 bar {
         status_command i3status
 }
@@ -206,7 +211,7 @@ gaps outer 2
 
 # this will capture the screen and save it to the lock screen using a custom script
 # assign lock.sh to $i3lockwall 
-set $i3lockwall sh ~/.config/i3/scripts/lock.sh
+#set $i3lockwall sh ~/.config/i3/scripts/lock.sh
 
 # key binds to lock the screen
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
@@ -247,8 +252,6 @@ exec --no-startup-id clipq
 
 # Start redshift with current location mozila location service
 exec redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
-
-exec --no-startup-id redshift
 
 # execute rofi application menu
 bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
