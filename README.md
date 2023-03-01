@@ -8,6 +8,8 @@
 * [ Installing necessey applications ](#installing-necessey-applications)
 * [Using dotfiles](#using-dotfiles)
 
+***I installed it using archinstall***
+
 ## Arch install summery
   - Disk partition - ext4 with encryption
   - kernel - LTS kernel
@@ -402,7 +404,64 @@ sudo pacman -S kvantum
         
 3. [Do essential things](#essential-things-to-do-after-installing-arch-linux)
   
-4. Install necessary applications 
+    - Install essential programs using:
+      ```
+      sudo pacman -S pacman-contrib xdg-user-dirs ufw
+      ```
+    - Install yay aur helper
+      ```
+      sudo pacman -S --needed base-devel git
+      mkdir Programs
+      cd Programs
+      git clone https://aur.archlinux.org/yay.git
+      cd yay
+      makepkg -si
+      ```
+    - Change pacman configuration
+       - Open the config file
+          ```
+          sudo vim /etc/pacman.conf
+          ```
+
+      - ***Uncomment "#Color" to change the black and white terminal to a colorsful one.***
+      - ***Add "ILoveCandy" below it to change default install progress bar.*** 
+
+      - ***Save the file.***  
+     
+    - Activate the paccache timer to clean package cache
+      ```
+      sudo systemctl enable paccache.timer
+      ```
+    
+    - Run xdg-user-dirs to create direcotries
+      ```
+      xdg-user-dirs-update
+      ```
+    
+    - Setup firewall
+      - Enable UFW
+         ```
+        sudo ufw enable
+        ```
+
+      - To check status
+        ```
+        sudo ufw status verbose
+        ```
+
+      - To auto start with the system
+        ```
+        sudo systemctl enable ufw.service
+        ```
+
+4. Customizing i3 setup
+    
+    - Install cutomizing programs
+      ```
+      sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd nitrogen picom
+      ```
+
+5. Install necessary applications 
      
    - For Laptops
      ```
