@@ -163,9 +163,9 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
     sudo pacman -S qt5ct
     ```
 - ***If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"***
-    - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct" line to it using
+    - create a ".profile" file in home directory and add 'export QT_QPA_PLATFORMTHEME="qt5ct"' line to it using
       ```
-      echo 'export QT_QPA_PLATFORMTHEME="qt5ct' > ~/.profile
+      echo 'export QT_QPA_PLATFORMTHEME="qt5ct"' > ~/.profile
       ```
 
 ### Install themes to change everything to a dark background
@@ -487,7 +487,7 @@ sudo pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
     - ***If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"***
       - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct" line to it using
           ```
-          echo 'export QT_QPA_PLATFORMTHEME="qt5ct' > ~/.profile
+          echo 'export QT_QPA_PLATFORMTHEME="qt5ct"' > ~/.profile
           ```
 
 5. Install necessary applications 
