@@ -232,9 +232,9 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 
 - screenfetch - System information program
 
-  Install screenfetch
+  Install neofetch
   ```
-  sudo pacman -S screenfetch
+  sudo pacman -S neofetch
   ```
 
 - feh - Commandline image viewer
@@ -515,7 +515,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 
      - Install necessery programs using
        ```
-       sudo pacman -S light rofi screenfetch feh tlp libinput ntfs-3g xss-lock scrot imagemagick redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+       sudo pacman -S light rofi neofetch feh tlp libinput ntfs-3g xss-lock imagemagick scrot redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
        ```
      - Run this command for backlight adjusment to work
        ```
@@ -546,7 +546,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 
      - Install necessery programs using
        ```
-       sudo pacman -S rofi screenfetch feh ntfs-3g xss-lock scrot imagemagick redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+       sudo pacman -S rofi neofetch feh ntfs-3g xss-lock imagemagick scrot redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
        ```
        
 ## Other stuff
