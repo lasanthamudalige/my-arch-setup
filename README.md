@@ -537,7 +537,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
        systemctl mask systemd-rfkill.service systemd-rfkill.socket
        ``` 
        
-     - Move  "90-toucpad.conf" file to "xorg.conf.d" folder to eneble tap functions
+     - Move  "90-toucpad.conf" file to "xorg.conf.d" folder to eneble touchpad tap functions
        ```
        sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
        ```
