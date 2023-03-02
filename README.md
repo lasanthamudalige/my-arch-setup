@@ -592,6 +592,19 @@ yay -S google-chrome visual-studio-code-bin
     ```
     wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
     ```
+    
+    ***Install nvm before doing below steps***
+    
+    - Install nvm in fish shell
+      
+      - Install fisher plugin
+        ```
+        fisher install FabioAntunes/fish-nvm edc/bass
+        ```
+      - Install fish nvm
+        ```
+        fisher install FabioAntunes/fish-nvm edc/bass
+        ```
 
 ## Screenshots
 
