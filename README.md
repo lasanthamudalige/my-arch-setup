@@ -605,6 +605,10 @@ yay -S google-chrome visual-studio-code-bin
         ```
         fisher install FabioAntunes/fish-nvm edc/bass
         ```
+ - Install nodemon for nodejs
+   ```
+   npm install -g nodemon # or using yarn: yarn global add nodemon
+   ```
 
 ## Screenshots
 
