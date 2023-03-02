@@ -606,7 +606,7 @@ yay -S google-chrome visual-studio-code-bin
       
       - Install fisher plugin
         ```
-        fisher install FabioAntunes/fish-nvm edc/bass
+        curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
         ```
       - Install fish nvm
         ```
