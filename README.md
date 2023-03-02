@@ -391,7 +391,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   ***More apps to install***
   ![AzmCYZ3](https://user-images.githubusercontent.com/91461938/221640326-aed2b07f-d110-487c-a549-9b13ddda80ed.jpg)
   
-## Using dotfiles
+## Using dotfiles (***Ignore above instructions***)
 
 ***Install firefox, kitty terminal and git if not installed***
   
