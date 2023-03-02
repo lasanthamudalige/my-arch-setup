@@ -568,6 +568,13 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 yay -S google-chrome visual-studio-code-bin
 ```
 
+  - ***To fix visual code code won't save login info install***
+    ```
+    sudo pacman -S gnome-keyring libsecret libgnome-keyring
+    ```
+    
+    - add a new password for the keyring
+
 ### Install programming stuff
   
   - Generate ssh key for github
