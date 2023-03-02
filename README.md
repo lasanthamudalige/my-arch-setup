@@ -6,7 +6,7 @@
 * [Essential things to do after installing arch linux](#essential-things-to-do-after-installing-arch-linux)
 * [Customizing i3 setup](#customizing-i3-setup)
 * [ Installing necessey applications ](#installing-necessey-applications)
-* [Using dotfiles](#using-dotfiles)
+* [Using dotfiles  (***Ignore above instructions***)](#using-dotfiles)
 * [Other stuff](#other-stuff)
 
 
@@ -391,7 +391,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   ***More apps to install***
   ![AzmCYZ3](https://user-images.githubusercontent.com/91461938/221640326-aed2b07f-d110-487c-a549-9b13ddda80ed.jpg)
   
-## Using dotfiles (***Ignore above instructions***)
+## Using dotfiles
 
 ***Install firefox, kitty terminal and git if not installed***
   
@@ -537,7 +537,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
        systemctl mask systemd-rfkill.service systemd-rfkill.socket
        ``` 
        
-     - Move  "90-toucpad.conf" file to "xorg.conf.d" folder
+     - Move  "90-toucpad.conf" file to "xorg.conf.d" folder to eneble tap functions
        ```
        sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
        ```
