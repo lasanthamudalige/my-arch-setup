@@ -568,7 +568,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 yay -S google-chrome visual-studio-code-bin
 ```
 
-  - ***To fix visual code code won't save login info install***
+  - ***To fix visual code code not saving login info install***
     ```
     sudo pacman -S gnome-keyring libsecret libgnome-keyring
     ```
