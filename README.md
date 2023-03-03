@@ -92,7 +92,7 @@ makepkg -si
     ```
     xdg-user-dirs-update
     ```
-### Install Microcode( No need for desktops as it will ask to select this in the install)
+### Install Microcode( No need for desktops as it will ask you to select this in the install)
 
 For AMD processors
 ```
