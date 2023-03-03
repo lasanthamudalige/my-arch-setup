@@ -17,7 +17,7 @@
   - profile - desktop with i3-gaps
   - Sound - pulseaudio
   - kernel - LTS kernel
-  - Additional packages - 'firefox' 'kitty'
+  - Additional packages - 'firefox' 'kitty' 'git'
   - Network configuration - NetworkManager
   - Other settings are stock setting
   
