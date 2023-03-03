@@ -125,6 +125,11 @@ sudo pacman -S intel-ucode
     ```
     sudo systemctl enable ufw.service
     ```
+    
+5. Enable SSD TRIM
+    ```
+    sudo systemctl enable fstrim.timer
+    ```
 
 ## Customizing i3 setup
 
@@ -183,7 +188,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 
 2. Install kvantum theme for qt applications:
     ```
-    sudo pacman -S kvantum breeze # Breeze icons pack to show icons
+    sudo pacman -S kvantum adwaita-qt5  # Breeze icons pack to show icons
     ```
 
 ## Installing necessey applications
@@ -237,13 +242,6 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   sudo pacman -S neofetch
   ```
 
-- feh - Commandline image viewer
-
-  Install feh
-  ```
-  sudo pacman -S feh
-  ```
-
 - TLP - Linux power manager of laptops
 
   1. Install TLP
@@ -267,7 +265,21 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
       ```
       systemctl mask systemd-rfkill.service systemd-rfkill.socket
       ```
-   
+
+- Powertop - A tool to diagnose issues with power consumption and power management
+  
+  Install Powertop
+    ```
+    sudo pacman -S powertop
+    ```
+
+- acpi - Client for battery, power, and thermal readings
+  
+  Install acpi
+    ```
+    sudo pacman -S acpi
+    ```
+
 - libinput - Touchpad driver for laptops
   
   1. Install libinput
@@ -279,7 +291,6 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
       ```
       sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
       ```
-  
   
 - ntfs-3g - ntfs partition support for arch
     
@@ -302,7 +313,6 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   sudo pacman -S xss-lock
   ```
   
-
 - Redshift - Adjust screen color temperature accodring to the time
 
   1. Install redshift and geoclue2 to find location
@@ -327,24 +337,45 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
       bindsym Print exec "flameshot gui"
       ```
 
-- CopyQ - A clipboard manager
+- ClipIt - A clipboard manager
   
-  1. Install CopyQ
+  1. Install ClipIt
       ```
-      sudo pacman -S copyq
+      yay -S clipit
       ```
 
   2. Add this command to i3 config file to start CopyQ on boot
       ```
-      exec --no-startup-id copyq
+      exec --no-startup-id clipit
       ```
 
-- Clementine - Audio player
+- Viewnior - Image viewer
+
+  Install Viewnior
+  ```
+  sudo pacman -S viewnior
+  ```
   
-  Install celementine
+- Mousepad - A text editor
+
+  Install Mousepad
   ```
-  sudo pacman -S clementine
+  sudo pacman -S mousepad
   ```
+  
+- Unzip - File unzip program
+
+  Install Unzip
+  ```
+  sudo pacman -S unzip
+  ```
+  
+- DeadBeef - Audio player 
+
+  Install DeadBeef  
+    ```
+    yay -S deadbeef
+    ```
 
 - VLC - Vedio player
     
@@ -360,18 +391,11 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   sudo pacman -S transmission-gtk # Transmission with gtk theme
   ```
 
-- GPicview - Image viewer
-  
-  Install gpicview
-  ```
-  sudo pacman -S gpicview
-  ```
+- Nemo - Cinnamon file manager
 
-- Dolphin file manager - KDE default file manager
-
-  Install dolphin file manager
+  Install Nemo
   ```
-  sudo pacman dolphin dolphin-plugins # extra plugins to use in the file manager
+  sudo pacman nemo
   ```
 
 - Okular - KDE default document viewer
@@ -379,13 +403,6 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   Install Okular
   ```
   sudo pacman -S okular
-  ```
-
-- Kate - KDE default text editor
-
-  Install Kate
-  ```
-  sudo pacman -S kate
   ```
   
   ***More apps to install***
