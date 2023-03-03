@@ -126,10 +126,10 @@ sudo pacman -S intel-ucode
     sudo systemctl enable ufw.service
     ```
     
-5. Enable SSD TRIM
-    ```
-    sudo systemctl enable fstrim.timer
-    ```
+### Enable SSD TRIM
+  ```
+  sudo systemctl enable fstrim.timer
+  ```
 
 ## Customizing i3 setup
 
@@ -513,12 +513,17 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
         ```
         sudo systemctl enable ufw.service
         ```
+        
+    - Enable SSD TRIM
+        ```
+        sudo systemctl enable fstrim.timer
+        ``` 
 
 4. Customizing i3 setup
     
     - Install cutomizing programs
       ```
-      sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code nitrogen picom lxappearance qt5ct gnome-themes-extra kvantum breeze
+      sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code nitrogen picom lxappearance qt5ct gnome-themes-extra adwaita-qt5 kvantum breeze
       ```
     - ***If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"***
       - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct" line to it using
@@ -541,17 +546,17 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
        
      - To enable TLP
        ```
-       systemctl enable tlp.service
+       sudo systemctl enable tlp.service
        ```
 
      - tlp-rdw(Radio Device Wizard) need one more service enable it using
        ```
-       systemctl enable NetworkManager-dispatcher.service
+        sudo systemctl enable NetworkManager-dispatcher.service
        ```
 
      - Mask the following services to avoid conflicts and assure proper operation of tlp-rdw(Radio Device Wizard)
        ```
-       systemctl mask systemd-rfkill.service systemd-rfkill.socket
+       sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
        ``` 
        
      - Move  "90-toucpad.conf" file to "xorg.conf.d" folder to eneble touchpad tap functions
@@ -563,8 +568,20 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 
      - Install necessery programs using
        ```
-       sudo pacman -S rofi neofetch feh ntfs-3g xss-lock imagemagick scrot redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+       sudo pacman -S rofi neofetch feh ntfs-3g xss-lock imagemagick scrot redshift flameshot copyq clementine vlc transmission-gtk okular bluez bluez2-utils blue2-libs
        ```
+   
+   - ***For both***
+    
+      - Install Clipit and DeadBeef
+          ```
+          yay -S clipit deadbeef
+          ```
+      
+      - Enable bluetooth
+          ```
+          sudo systemctl enable bluetooth
+          ```
        
 ## Other stuff
 
