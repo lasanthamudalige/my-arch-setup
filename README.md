@@ -179,7 +179,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
       echo 'export QT_QPA_PLATFORMTHEME="qt5ct"' > ~/.profile
       ```
 
-### Install themes to change everything to a dark background
+### Install themes and icons to change everything to a dark background
 
 1. Install Adwaita and Adwaita-dark themes for gtk applications:
     ```
@@ -188,7 +188,12 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 
 2. Install kvantum theme for qt applications:
     ```
-    sudo pacman -S kvantum adwaita-qt5  # Breeze icons pack to show icons
+    sudo pacman -S kvantum 
+    ```
+
+3. Install papirus icons
+    ```
+    sudo pacman -S papirus-icon-theme
     ```
 
 ## Installing necessey applications
@@ -325,6 +330,11 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
       exec redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
       ```
 
+- ARandr - UI fro XRandr
+    ```
+    sudo pacman -S arandr
+    ```
+
 - Flameshot - Screenshot tool
 
   1. Install flameshot
@@ -391,11 +401,11 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   sudo pacman -S transmission-gtk # Transmission with gtk theme
   ```
 
-- Nemo - Cinnamon file manager
+- SaceFm - A file manager
 
-  Install Nemo
+  Install SpaceFM
   ```
-  sudo pacman nemo
+  yay -S spacefm
   ```
 
 - Okular - KDE default document viewer
@@ -523,7 +533,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
     
     - Install cutomizing programs
       ```
-      sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code nitrogen picom lxappearance qt5ct gnome-themes-extra adwaita-qt5 kvantum breeze
+      sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code nitrogen picom lxappearance qt5ct gnome-themes-extra kvantum papirus-icon-theme
       ```
     - ***If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"***
       - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct" line to it using
@@ -533,11 +543,11 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 
 5. Install necessary applications 
      
-   - For Laptops
+   - ***For Laptops***
 
      - Install necessery programs using
        ```
-       sudo pacman -S light rofi neofetch feh tlp libinput ntfs-3g xss-lock imagemagick scrot redshift flameshot copyq clementine vlc transmission-gtk gpicview dolphin dolphin-plugins okular kate
+       sudo pacman -S light rofi neofetch ntfs-3g xss-lock imagemagick scrot redshift flameshot vlc transmission-gtk viewnior okular mousepad  unzip arandr tlp tlp-rdw powertop acpi
        ```
      - Run this command for backlight adjusment to work
        ```
@@ -563,25 +573,34 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
        ```
        sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
        ```
+       
+     - ***If your laptop is a thinkpad install this***
+        ```
+        sudo pacman -S acpi_call
+        ```
      
-   - For Desktops
+   - ***For Desktops***
 
      - Install necessery programs using
        ```
-       sudo pacman -S rofi neofetch feh ntfs-3g xss-lock imagemagick scrot redshift flameshot copyq clementine vlc transmission-gtk okular bluez bluez2-utils blue2-libs
+       sudo pacman -S rofi neofetch ntfs-3g xss-lock imagemagick scrot redshift flameshot vlc transmission-gtk viewnior okular mousepad  unzip arandr
        ```
    
    - ***For both***
     
-      - Install Clipit and DeadBeef
+      - Install Clipit, SpaceFm and DeadBeef
           ```
-          yay -S clipit deadbeef
+          yay -S clipit spacefm deadbeef -y 
+          ```
+      - Install bluetooth
+          ```
+          sudo pacman -S bluez bluez2-utils blue2-libs
           ```
       
-      - Enable bluetooth
-          ```
-          sudo systemctl enable bluetooth
-          ```
+        - Enable bluetooth
+            ```
+            sudo systemctl enable bluetooth
+            ```
        
 ## Other stuff
 
@@ -599,7 +618,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
       
 ### Install google chrome, visual studio code with yay
 ```
-yay -S google-chrome visual-studio-code-bin
+yay -S google-chrome visual-studio-code-bin -y
 ```
 
   - ***To fix visual code code not saving login info install***
@@ -626,7 +645,7 @@ yay -S google-chrome visual-studio-code-bin
 
   - Install python
     ```
-    sudo pacman -S python tk python-pip # python-tk python-pip packages
+    sudo pacman -S python tk python-pip # python-tk python-pip packages 
     ```
   
   - Install nvm(Node version manager)
