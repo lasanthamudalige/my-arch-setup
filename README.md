@@ -384,7 +384,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 
   Install DeadBeef  
     ```
-    yay -S deadbeef
+    yay -S deadbeef --needed
     ```
 
 - VLC - Vedio player
