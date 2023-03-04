@@ -414,6 +414,13 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   ```
   sudo pacman -S okular
   ```
+
+- LibreOffice - FOSS Office program
+   
+  Install LibreOffice
+  ```
+  sudo pacman -S libreoffice-fresh # or libreoffice-still
+  ```
   
   ***More apps to install***
   ![AzmCYZ3](https://user-images.githubusercontent.com/91461938/221640326-aed2b07f-d110-487c-a549-9b13ddda80ed.jpg)
@@ -547,7 +554,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 
      - Install necessery programs using
        ```
-       sudo pacman -S light rofi neofetch ntfs-3g xss-lock imagemagick scrot redshift flameshot vlc transmission-gtk viewnior okular mousepad  unzip arandr tlp tlp-rdw powertop acpi
+       sudo pacman -S light rofi neofetch ntfs-3g xss-lock imagemagick scrot redshift flameshot vlc transmission-gtk viewnior okular mousepad  unzip arandr tlp tlp-rdw powertop acpi libreoffice-fresh # or libreoffice-still for stable version
        ```
      - Run this command for backlight adjusment to work
        ```
@@ -583,7 +590,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 
      - Install necessery programs using
        ```
-       sudo pacman -S rofi neofetch ntfs-3g xss-lock imagemagick scrot redshift flameshot vlc transmission-gtk viewnior okular mousepad  unzip arandr
+       sudo pacman -S rofi neofetch ntfs-3g xss-lock imagemagick scrot redshift flameshot vlc transmission-gtk viewnior okular mousepad  unzip arandr libreoffice-fresh # or libreoffice-still for stable version
        ```
    
    - ***For both***
