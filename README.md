@@ -694,7 +694,7 @@ yay -S google-chrome visual-studio-code-bin -y
         sudo systemctl enable mongodb
         ```
      
-     - To test connection status
+     - ~~To test connection status~~ ***Not Working***
         ```
         mongo --version
         ```
