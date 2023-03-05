@@ -676,6 +676,28 @@ yay -S google-chrome visual-studio-code-bin -y
    ```
    npm install -g nodemon # or using yarn: yarn global add nodemon
    ```
+   
+ - Install MongoDB
+   ```
+   yay -S mongodb-bin
+   ```
+   
+     - To run mongodb services
+        ```
+        sudo systemctl start mongodb
+
+        sudo systemctl status mongodb
+        ```
+     
+     - To enable mongodb
+        ```
+        sudo systemctl enable mongodb
+        ```
+     
+     - To test connection status
+        ```
+        mongo --version
+        ```
 
 ## Screenshots
 
