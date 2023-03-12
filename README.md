@@ -361,11 +361,11 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   sudo pacman -S unzip
   ```
   
-- DeadBeef - Audio player 
+- Clementine - Audio player 
 
-  Install DeadBeef  
+  Install Clementine  
     ```
-    yay -S deadbeef --needed
+    pacman -S clementine
     ```
 
 - VLC - Vedio player
@@ -386,7 +386,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 
   Install Pcmanfm
   ```
-  pacman -S pcmanfm
+  pacman -S pcmanfm gvfs xarchiver # gvfs and xarchiver is for mounting with udisks and remote filesystems and archive management
   ```
 
 - Okular - KDE default document viewer
@@ -511,11 +511,6 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
         ```
         sudo systemctl enable ufw.service
         ```
-        
-    - Enable SSD TRIM
-        ```
-        sudo systemctl enable fstrim.timer
-        ``` 
 
 4. Customizing i3 setup
     
@@ -535,11 +530,16 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
 
      - Install necessery programs using
        ```
-       sudo pacman -S light rofi neofetch ntfs-3g xss-lock imagemagick scrot redshift flameshot vlc transmission-gtk viewnior okular mousepad  unzip arandr tlp tlp-rdw powertop acpi libreoffice-fresh # or libreoffice-still for stable version
+       sudo pacman -S light rofi neofetch ntfs-3g xss-lock bluez bluez-utils bluez-libs pcmanfm gvfs xarchiver clementine gvfs xarchiver imagemagick scrot redshift flameshot vlc transmission-gtk viewnior okular mousepad  unzip tlp tlp-rdw libreoffice-fresh # or libreoffice-still for stable version
        ```
      - Run this command for backlight adjusment to work
        ```
        sudo usermod -aG video lasantha # Replace "lasantha" with your username
+       ```
+       
+     - Enable bluetooth
+       ```
+       sudo systemctl enable bluetooth
        ```
        
      - To enable TLP
@@ -561,28 +561,23 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
        ```
        sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
        ```
-       
-     - ***If your laptop is a thinkpad install this***
-        ```
-        sudo pacman -S acpi_call
-        ```
      
    - ***For Desktops***
 
      - Install necessery programs using
        ```
-       sudo pacman -S rofi neofetch ntfs-3g xss-lock imagemagick scrot redshift flameshot vlc transmission-gtk viewnior okular mousepad  unzip arandr libreoffice-fresh # or libreoffice-still for stable version
+       sudo pacman -S rofi neofetch ntfs-3g xss-lock pcmanfm clementine imagemagick scrot redshift flameshot vlc transmission-gtk viewnior okular mousepad  unzip libreoffice-fresh # or libreoffice-still for stable version
        ```
    
    - ***For both***
     
       - Install Clipit, SpaceFm and DeadBeef
           ```
-          yay -S clipit spacefm deadbeef -y 
+          yay -S clipit -y 
           ```
       - Install bluetooth
           ```
-          sudo pacman -S bluez bluez2-utils blue2-libs
+          sudo pacman -S bluez bluez-utils bluez-libs
           ```
       
         - Enable bluetooth
