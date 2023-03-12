@@ -92,7 +92,7 @@ makepkg -si
     ```
     xdg-user-dirs-update
     ```
-### Install Microcode( No need for desktops as it will ask you to select this in the install)
+### ~~Install Microcode~~( No need for desktops as it will ask you to select this in the install)
 
 For AMD processors
 ```
@@ -233,7 +233,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
       bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
       ```
 
-- Htop - terminal system monitor
+- ~~Htop - terminal system monitor~~(This will get installed automaticallyR)
 
   Install Htop
   ```
@@ -270,20 +270,6 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
       ```
       systemctl mask systemd-rfkill.service systemd-rfkill.socket
       ```
-
-- Powertop - A tool to diagnose issues with power consumption and power management
-  
-  Install Powertop
-    ```
-    sudo pacman -S powertop
-    ```
-
-- acpi - Client for battery, power, and thermal readings
-  
-  Install acpi
-    ```
-    sudo pacman -S acpi
-    ```
 
 - libinput - Touchpad driver for laptops
   
@@ -329,11 +315,6 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
       ```
       exec redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
       ```
-
-- ARandr - UI fro XRandr
-    ```
-    sudo pacman -S arandr
-    ```
 
 - Flameshot - Screenshot tool
 
@@ -401,11 +382,11 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   sudo pacman -S transmission-gtk # Transmission with gtk theme
   ```
 
-- SaceFm - A file manager
+- Pcmanfm - A file manager
 
-  Install SpaceFM
+  Install Pcmanfm
   ```
-  yay -S spacefm
+  pacman -S pcmanfm
   ```
 
 - Okular - KDE default document viewer
