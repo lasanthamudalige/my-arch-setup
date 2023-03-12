@@ -125,11 +125,6 @@ sudo pacman -S intel-ucode
     ```
     sudo systemctl enable ufw.service
     ```
-    
-### Enable SSD TRIM
-  ```
-  sudo systemctl enable fstrim.timer
-  ```
 
 ## Customizing i3 setup
 
