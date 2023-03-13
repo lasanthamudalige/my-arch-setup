@@ -47,17 +47,16 @@
         sudo mv picom/ ~/.config/
         ```
         
-     - Move rofi folder to "~/.config" folder
-        ```
-        sudo mv rofi/ ~/.config/
-        ```
-        
      - Move ranger folder to "~/.config" folder
         ```
         sudo mv ranger/ ~/.config/
         ```
-       
         
+     - Move rofi folder to "~/.config" folder
+        ```
+        sudo mv rofi/ ~/.config/
+        ```
+               
 3. Do essential things
   
     - Install all  essential programs using:
