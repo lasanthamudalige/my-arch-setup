@@ -6,7 +6,7 @@ echo
 # Move "i3" config file to "~/.config"
 echo "Copying i3 folder..."
 echo
-sudo cp -r i3/ ~.config/
+sudo cp -r i3/ ~/.config/
 echo
 
 # Move "i3status.conf" to "/etc" folder
