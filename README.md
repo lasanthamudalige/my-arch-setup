@@ -141,7 +141,7 @@
 
      - Install necessery programs using
        ```
-       sudo pacman -S light rofi neofetch ntfs-3g xss-lock blueman bluez bluez-utils bluez-libs pcmanfm gvfs xarchiver ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt clementine redshift flameshot vlc transmission-gtk gpicview epdfview mousepad tlp tlp-rdw libreoffice-fresh # or libreoffice-still for stable version
+       sudo pacman -S light rofi neofetch ntfs-3g xss-lock blueman bluez bluez-utils bluez-libs pcmanfm gvfs xarchiver ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh # or libreoffice-still for stable version
        ```
      - Run this command for backlight adjusment to work
        ```
@@ -177,7 +177,7 @@
 
      - Install necessery programs using
        ```
-       sudo pacman -S rofi neofetch ntfs-3g xss-lock pcmanfm clementine imagemagick scrot redshift flameshot vlc transmission-gtk viewnior okular mousepad  unzip libreoffice-fresh # or libreoffice-still for stable version
+       sudo pacman -S rofi neofetch ntfs-3g xss-lock pcmanfm gvfs xarchiver ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad ibreoffice-fresh # or libreoffice-still for stable version
        ```
       - Install bluetooth
           ```
@@ -191,9 +191,9 @@
     
    - ***For both***
     
-      - Install Clipit, SpaceFm and DeadBeef
+      - Install Autotiling
           ```
-          yay -S clipit -y 
+          yay -S autotiling
           ```
       
        
