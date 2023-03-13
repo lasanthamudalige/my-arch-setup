@@ -37,39 +37,26 @@
       sudo mv i3status.conf /etc/
       ```
         
-     - Move kitty.conf to "~/.config/kitty" folder
+     - Move kitty folder to "~/.config" folder
        ```
-       sudo mv kitty.conf ~/.config/kitty/
+       sudo mv kitty/ ~/.config/
        ```
+     
+     - Move picom folder to "~/.config" folder
+        ```
+        sudo mv picom/ ~/.config/
+        ```
         
-       ***If there is no kitty folder make one inside ".config" folder***
+     - Move rofi folder to "~/.config" folder
+        ```
+        sudo mv rofi/ ~/.config/
+        ```
         
-          - cd into ".config" folder
-            ```
-            cd ~/.config/
-            ```
-              
-          - Make a kitty folder
-            ```
-            mkdir kitty 
-            ```
-        
-     - Move picom.conf to "~/.config/picom" folder
-       ```
-       sudo mv picom.conf ~/.config/picom/
-       ```
-        
-       ***If there is no picom folder make one inside ".config" folder***
-          
-          - cd into .config folder
-            ```
-            cd ~/.config/
-            ```
-              
-          - Make picom folder
-            ```
-            mkdir picom
-            ```
+     - Move ranger folder to "~/.config" folder
+        ```
+        sudo mv ranger/ ~/.config/
+        ```
+       
         
 3. Do essential things
   
