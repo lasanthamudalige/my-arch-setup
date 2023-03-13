@@ -277,6 +277,7 @@ yay -S google-chrome visual-studio-code-bin -y
 
 ## Screenshots
 
+![2023-03-13_21-24](https://user-images.githubusercontent.com/91461938/224756323-57b53b92-5525-4d4e-8bd6-cae8cb69bb1f.png)
 ![image](https://user-images.githubusercontent.com/91461938/224755460-b365ca83-8ad4-4162-b2af-029190ab7190.png)
 ![image](https://user-images.githubusercontent.com/91461938/224755227-7bcb489a-9ff7-401a-848c-a281f6971f54.png)
 
