@@ -1,4 +1,4 @@
-# How i configured my first arch i3 setup
+# My arch i3 setup
 
 ## Table of contents
 * [Arch install summery](#arch-install-summery)
