@@ -15,38 +15,34 @@ echo
 sudo mv i3status.conf /etc/
 echo
 
-# Move kitty.conf to "~/.config/kitty" folder or create a folder and move that file
-echo "Moving kitty.conf..."
+# Move kitty folder to "~/.config/" folder or create a folder and move that file
+echo "Copying kitty folder..."
 echo
-DIR=~/.config/kitty
-
-if [ ! -d "$DIR" ];
-then
-	sudo mkdir ~/.config/kitty
- 	sudo mv kitty.conf ~/.config/kitty/
-else
- 	sudo mv kitty.conf ~/.config/kitty/
-fi
+sudo cp -r kitty/ ~/.config
 echo
 
-# Move picom.conf to "~/.config/picom" folder or create a folder and move that file
-echo "Moving picom.conf..."
+# Move picom folder to "~/.config/" folder or create a folder and move that file
+echo "Coving picom folder..."
 echo
-DIR=~/.config/picom
+sudo cp -r picom/ ~/.config
+echo
 
-if [ ! -d "$DIR" ];
-then
-	sudo mkdir ~/.config/picom
- 	sudo mv picom.conf ~/.config/kitty/
-else
- 	sudo mv kitty.conf ~/.config/kitty/
-fi
+# Move ranger to "~/.config/" folder or create a folder and move that file
+echo "Coving Ranger folder..."
+echo
+sudo cp -r ranger/ ~/.config
+echo
+
+# Move rofi folder to "~/.config/" folder or create a folder and move that file
+echo "Coving Rofi folder..."
+echo
+sudo cp -r rofi/ ~/.config
 echo
 
 # Install essential apps
 echo "Installing essential apps"
 echo
-sudo pacman -S pacman-contrib xdg-user-dirs ufw 
+sudo pacman -S pacman-contrib xdg-user-dirs ufw -y
 echo
 
 # Install yay aur helper
@@ -84,7 +80,7 @@ echo
 
 # Install customizing programs
 echo
-sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code nitrogen picom lxappearance qt5ct gnome-themes-extra kvantum papirus-icon-theme
+sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code nitrogen picom lxappearance qt5ct gnome-themes-extra kvantum papirus-icon-theme -y
 # This to fix qt5ct not working
 echo 'export QT_QPA_PLATFORMTHEME="qt5ct"' > ~/.profile
 echo
@@ -96,7 +92,7 @@ then
     # Install other programs
     echo "Installing other programs"
     echo
-    sudo pacman -S light rofi neofetch ntfs-3g xss-lock bluez bluez-utils bluez-libs imagemagick scrot redshift flameshot vlc pcmanfm transmission-gtk viewnior okular mousepad  unzip arandr tlp tlp-rdw libreoffice-fresh 
+    sudo pacman -S light rofi neofetch ntfs-3g xss-lock blueman bluez bluez-utils bluez-libs pcmanfm gvfs xarchiver ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh -y # or libreoffice-still for stable version
     echo
 
     # This is to backlight program to work
@@ -129,7 +125,7 @@ then
 elif [ $TYPE == "2" ]
 then
     # Installing other programs
-    sudo pacman -S rofi neofetch ntfs-3g xss-lock imagemagick scrot redshift flameshot vlc pcmanfm transmission-gtk viewnior okular mousepad  unzip arandr libreoffice-freshn 
+    sudo pacman -S rofi neofetch ntfs-3g xss-lock pcmanfm gvfs xarchiver ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad ibreoffice-fresh -y # or libreoffice-still for stable version
 
     # Install bluetooth if the user want
     echo "Install bluetooth (y/n):"
@@ -144,4 +140,41 @@ then
     fi  
 fi
 echo
+# Install autotiling for i3
+echo "Install autotiling..."
+yay -S autotiling -y
+echo
+echo "Install programming stuff? (y/n):"
+read RESPONSE
+if  [ $RESPONSE == "y" ]  
+then 
+    # Install fish shell
+    echo "Installing fish shell"
+    echo
+    sudo pacman -S fish
+    echo 
+
+    # Install google chrome and vs code
+    echo "Installing chrome and vs code"
+    echo
+    yay -S google-chrome visual-studio-code-bin -y
+    echo
+
+    Install needed python packages 
+    echo "Installing Python-tk and pip package manager"
+    echo
+    sudo pacman -S python tk python-pip # python-tk python-pip packages
+    echo 
+
+    # Install mogodb and enable autostart on boot
+    echo "Installing MongoDB"
+    echo
+    yay -S mongodb-bin -y
+    sudo systemctl start mongodb
+    sudo systemctl status mongodb
+    sudo systemctl enable mongodb
+    mongod --version
+    echo
+fi
+
 echo "Setup complete."
