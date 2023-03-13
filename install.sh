@@ -92,7 +92,7 @@ then
     # Install other programs
     echo "Installing other programs"
     echo
-    sudo pacman -S light rofi neofetch ntfs-3g xss-lock blueman bluez bluez-utils bluez-libs pcmanfm gvfs xarchiver ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh -y # or libreoffice-still for stable version
+    sudo pacman -S light rofi neofetch ntfs-3g xss-lock blueman bluez bluez-utils bluez-libs pcmanfm gvfs xarchiver ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh -y # or libreoffice-still for stable version
     echo
 
     # This is to backlight program to work
@@ -125,7 +125,7 @@ then
 elif [ $TYPE == "2" ]
 then
     # Installing other programs
-    sudo pacman -S rofi neofetch ntfs-3g xss-lock pcmanfm gvfs xarchiver ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad ibreoffice-fresh -y # or libreoffice-still for stable version
+    sudo pacman -S rofi neofetch ntfs-3g xss-lock pcmanfm gvfs xarchiver ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad ibreoffice-fresh -y # or libreoffice-still for stable version
 
     # Install bluetooth if the user want
     echo "Install bluetooth (y/n):"
