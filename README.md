@@ -19,7 +19,9 @@
   
 ## Using dotfiles
 
-***Install firefox, kitty terminal and git if not installed***
+- ***Install firefox, kitty terminal and git if not installed***
+
+- ***Run the script "install.sh" or follow below instructions.***
   
 1. Clone the repo
   ```
@@ -275,8 +277,7 @@ yay -S google-chrome visual-studio-code-bin -y
 
 ## Screenshots
 
-![image](https://user-images.githubusercontent.com/91461938/222118296-dd23517d-9333-46c3-9366-39965e5c8617.png)
-![image](https://user-images.githubusercontent.com/91461938/222118376-d9aad6c4-ff64-47b3-8b2a-8fec83cc7517.png)
-![image](https://user-images.githubusercontent.com/91461938/222118886-78ddf1bb-3cd3-42bd-8bcb-8f08b9ac6c0d.png)
+![image](https://user-images.githubusercontent.com/91461938/224755460-b365ca83-8ad4-4162-b2af-029190ab7190.png)
+![image](https://user-images.githubusercontent.com/91461938/224755227-7bcb489a-9ff7-401a-848c-a281f6971f54.png)
 
 
