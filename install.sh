@@ -87,7 +87,7 @@ echo
 
 echo "Laptop or a desktop (Enter 1 or 2):"
 read TYPE
-if [ $TYPE == "1" ]
+if [$TYPE == "1"]
 then
     # Install other programs
     echo "Installing other programs"
@@ -122,7 +122,7 @@ then
     sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
     echo
 
-elif [ $TYPE == "2" ]
+elif [$TYPE == "2"]
 then
     # Installing other programs
     sudo pacman -S rofi neofetch ntfs-3g xss-lock pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad ibreoffice-fresh -y # or libreoffice-still for stable version
@@ -146,7 +146,7 @@ yay -S autotiling -y
 echo
 echo "Install programming stuff? (y/n):"
 read RESPONSE
-if  [ $RESPONSE == "y" ]  
+if  [$RESPONSE == "y"]  
 then 
     # Install fish shell
     echo "Installing fish shell"
@@ -174,7 +174,6 @@ then
     sudo systemctl status mongodb
     sudo systemctl enable mongodbi
     mongod --version
-    ./new_github_ssh_and_nvm_install.sh
 
     echo "Generating github ssh and installing nvm"
     echo
