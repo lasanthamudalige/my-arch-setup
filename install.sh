@@ -172,8 +172,13 @@ then
     yay -S mongodb-bin -y
     sudo systemctl start mongodb
     sudo systemctl status mongodb
-    sudo systemctl enable mongodb
+    sudo systemctl enable mongodbi
     mongod --version
+    ./new_github_ssh_and_nvm_install.sh
+
+    echo "Generating github ssh and installing nvm"
+    echo
+    ./new_github_ssh_and_nvm_install.sh
     echo
 fi
 
